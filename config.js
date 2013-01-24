@@ -7,6 +7,6 @@
  */
 module.exports={
     cookieSecret:'njblog',
-    db:'njblog',
-    host:'localhost'
+    db:'NJBlog',
+    host:'mongodb://njblog:njblog@linus.mongohq.com:10062/NJBlog'
 };
