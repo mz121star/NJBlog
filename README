@@ -1,11 +1,11 @@
-  #*NJBlog*多人博客系统#
-
-  ----------
-
-  *NJBlog*使用Nodejs开发，为Nodejs开发网站的实验性产品
-
-  **计划具有如下功能**
   
+#*NJBlog*多人博客系统#
+
+----------
+
+*NJBlog*使用Nodejs开发，为Nodejs开发网站的实验性产品
+
+**计划具有如下功能**
   
   
   - 支持多人的blog系统
@@ -26,6 +26,4 @@
   [项目进度查询](https://trello.com/board/node-js-blog/50dda31c39e3d3341b001433 "项目进度")
   
 
-  **NJBlog目前由两位Node爱好者协同开发！**
-  
-
+**NJBlog目前由两位Node爱好者协同开发！**
