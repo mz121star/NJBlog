@@ -11,7 +11,7 @@ function DaoBase (Model){
     this.model = Model;
 }
 
-
+//create
 DaoBase.prototype.create = function (doc,callback){
     this.model.create(doc, function (error) {
         if(error) return callback(error);
