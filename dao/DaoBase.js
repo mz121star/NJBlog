@@ -7,6 +7,7 @@
  */
 
 function DaoBase (Model){
+
     this.model = Model;
 }
 
