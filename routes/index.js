@@ -3,7 +3,7 @@
  */
 
 
-var Users = require('./UserDao');
+var Users = require('..dao/UserDao');
 exports.index = function (req, res) {
 
 //    var jarrick = new Users({name:'Jarrick' + Math.random() * 1000, sex:'0', phone:'12345678901',
