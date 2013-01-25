@@ -3,12 +3,13 @@
  */
 
 
-var Users = require('../models/Users');
+var Users = require('../Dao/Users');
 exports.index = function (req, res) {
 
-//    var jarrick = new Users({name:'Jarrick'+Math.random()*1000, age:'26'});
+//    var jarrick = new Users({name:'Jarrick' + Math.random() * 1000, sex:'0', phone:'12345678901',
+//        address:{city:'dalian', 'street':'xigang', test:'test'}});
 //    jarrick.save(function (data) {
-//        console.log(data.name);
+//        console.log(data);
 //    });
 
 

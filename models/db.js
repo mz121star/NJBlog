@@ -9,9 +9,9 @@ var config = require('../config'),
     mongoose = require('mongoose');
 
 mongoose.connect(config.connectionstring);
+//mongoose.connect('localhost','njblog');
 //mongoose.connect(config.host);
 module.exports = function (name, model) {
-
     var schema = mongoose.Schema(model);
     return mongoose.model(name, schema);
 };
