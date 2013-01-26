@@ -13,5 +13,8 @@ mongoose.connect(config.connectionstring);
 //mongoose.connect(config.host);
 module.exports = function (name, model) {
     var schema = mongoose.Schema(model);
+    schema.statics.getById = function (id, cb) {
+        this.find({_id:id}, cb);
+    };
     return mongoose.model(name, schema);
 };
