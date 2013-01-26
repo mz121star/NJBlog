@@ -7,13 +7,11 @@
  */
 var Db = require('./db');
 var model = {
-    id:'',
-    title:'',
-    content:'',
-    url:'',
-    keyword:{}
-
+    title:String,
+    content:String,
+    url:String,
+    keyword:[String]
 };
-var Blog = Db('Blog', model);
+var BlogModel = Db('Blog', model);
 
-module.exports=Blog;
+module.exports=BlogModel;

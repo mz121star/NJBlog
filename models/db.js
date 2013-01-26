@@ -11,10 +11,27 @@ var config = require('../config'),
 mongoose.connect(config.connectionstring);
 //mongoose.connect('localhost','njblog');
 //mongoose.connect(config.host);
-module.exports = function (name, model) {
+module.exports = function (name, model, extendMethods) {
     var schema = mongoose.Schema(model);
     schema.statics.getById = function (id, cb) {
         this.find({_id:id}, cb);
     };
+    extendSchemaMethods(extendMethods, schema);
     return mongoose.model(name, schema);
+}
+
+var extendSchemaMethods = function (extendMethods, schema) {
+    extendMethods = extendMethods || {};
+    var statics = extendMethods.statics;
+    var methods = extendMethods.methods;
+    if (statics) {
+        for (var name in statics) {
+            schema.statics[name] = statics[name];
+        }
+    }
+    if (methods) {
+        for (name in methods) {
+            schema.methods[name] = methods[name];
+        }
+    }
 };

@@ -12,8 +12,8 @@ exports.index = function (req, res) {
 //        console.log(data);
 //    });
 
-//     Users.getById('51037e2a8a75b31c53000001');
-
+    Users.getById('51037e2a8a75b31c53000001');
+    Users.getByName('Jarrick678.9289640728384');
 
     res.render('index', { title:'NJBlog.' });
 };

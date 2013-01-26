@@ -5,7 +5,8 @@
  * Time: 11:01 AM
  * To change this template use File | Settings | File Templates.
  */
-module.exports = {
+var Db = require('./db');
+var model = {
     name:String,
     password:String,
     sex:Number,
@@ -13,3 +14,13 @@ module.exports = {
     phone:String,
     address:{city:String, street:String}
 };
+
+var statics = {
+    getByName:function (name, cb) {
+        this.find({name:name}, cb);
+    }
+};
+
+var UsersModel = Db('Users', model, {statics:statics});
+
+module.exports = UsersModel;
