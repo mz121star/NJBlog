@@ -1,12 +1,8 @@
-var expect=require("chai");
+var should = require('should');
 describe('UT test', function () {
 
     it('test can run', function(){
-        var arr = [];
-        var n = arr.push('foo');
-        expect(n).to.equal(1);
-        var n = arr.push('bar');
-        expect(n).to.equal(2);
+        "test ut".should.include('ut');
     })
 
 });
