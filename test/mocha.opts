@@ -1,4 +1,4 @@
 --require should
---require test/support/http.js
+--require test/app.js
 --growl
 --ignore-leaks
