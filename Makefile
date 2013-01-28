@@ -19,4 +19,4 @@ test-cov: cov
 	@$(MAKE) -C .cov test REPORTER=progress
 	@$(MAKE) -C .cov test REPORTER=html-cov > coverage.html
 
-.PHONY: test
+.PHONY: test  test-cov cov
