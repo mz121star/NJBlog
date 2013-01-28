@@ -10,5 +10,14 @@
         "ejs":"*",
         "mongodb":">=0.9.9",
         "mongoose":">=0.9.9"
+    },
+    "devDependencies": {
+        "should": "*",
+        "mocha": "*",
+        "rewire": "*",
+        "jscover": "*"
+    },
+    "scripts": {
+        "test": "make test"
     }
 }
