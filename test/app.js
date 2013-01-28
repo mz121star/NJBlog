@@ -1,4 +1,4 @@
-
+var expect=require("chai");
 describe('UT test', function () {
 
     it('test can run', function(){
