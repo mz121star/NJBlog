@@ -22,18 +22,18 @@ UsersDAO.prototype.save = function (callback) {
     });
 };
 
-UsersDAO.getById = function (id, callback) {
-    UsersModel.getById(id, function (err, user) {
-        if (err)
-            console.log(err);
-        console.log(user);
-    });
-};
-
-UsersDAO.getByName = function (name, callback) {
-    UsersModel.getByName(name, function (err, user) {
-        if (err)
-            console.log(err);
-        console.log(user);
-    });
-};
+//UsersDAO.getById = function (id, callback) {
+//    UsersModel.getById(id, function (err, user) {
+//        if (err)
+//            console.log(err);
+//        console.log(user);
+//    });
+//};
+//
+//UsersDAO.getByName = function (name, callback) {
+//    UsersModel.getByName(name, function (err, user) {
+//        if (err)
+//            console.log(err);
+//        console.log(user);
+//    });
+//};
