@@ -26,12 +26,14 @@ var extendSchemaMethods = function (extendMethods, schema) {
     var methods = extendMethods.methods;
     if (statics) {
         for (var name in statics) {
-            schema.statics[name] = statics[name];
+            if(statics.hasOwnProperty(name))
+              schema.statics[name] = statics[name];
         }
     }
     if (methods) {
         for (name in methods) {
-            schema.methods[name] = methods[name];
+            if(methods.hasOwnProperty(name))
+              schema.methods[name] = methods[name];
         }
     }
 };
