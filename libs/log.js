@@ -5,29 +5,34 @@
  * Time: 5:17 PM
  * To change this template use File | Settings | File Templates.
  */
-
-var log = module.exports = function (type, message, occupied) {
-    occupied = occupied || "";
-    switch (type) {
-        case 'create':
-            console.log('create'.green + ' ' + message, occupied);
-            break;
-        case 'patch':
-            console.log('patch'.magenta + ' ' + message, occupied);
-            break;
-        case 'warn':
-            console.log('warn:'.yellow.inverse + ' ' + message.yellow, occupied);
-            break;
-        case 'error':
-            console.log('error:'.red.inverse + ' ' + message.red, occupied);
-            break;
-        case 'version':
-        case 'success':
-        case 'title':
-            console.log(type.green.inverse + ' ' + message.green, occupied);
-            break;
-        default:
-            break;
-    }
-    ;
+exports.create = function (message, occupied) {
+    log('create:'.green, message, occupied);
 };
+
+exports.patch = function (message, occupied) {
+    log('patch:'.magenta, message, occupied);
+};
+
+exports.warn = function (message, occupied) {
+    log('warn:'.yellow.inverse, message.yellow, occupied);
+};
+
+exports.error = function (message, occupied) {
+    log('error:'.red.inverse, message.red, occupied);
+};
+
+exports.success = function (message, occupied) {
+    log('success:'.green.inverse, message.green, occupied);
+};
+
+exports.version = function (message, occupied) {
+    log('version:'.green.inverse, message.green, occupied);
+};
+
+exports.title = function (message, occupied) {
+    log('title:'.green.inverse, message.green, occupied);
+};
+
+function log(head, body, occupied) {
+    console.log(head + ' ' + body, occupied || '');
+}
