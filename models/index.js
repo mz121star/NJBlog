@@ -2,15 +2,13 @@ var mongoose = require('mongoose');
 var config = require('../config');
 var fs = require('fs');
 
-mongoose.connect(config.connectionstring, function (err) {
-    if (err) {
-        console.error('connect to %s error: ', config.connectionstring, err.message);
-        process.exit(1);
-    }
-});
+mongoose.connect(config.connectionstring);
 
 var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
+db.on('error', function(){
+    console.error('connect to %s error: ', config.connectionstring, err.message);
+    process.exit(1);
+});
 db.once('open', function () {
     console.log('%s has been connected.', config.connectionstring);
 });
