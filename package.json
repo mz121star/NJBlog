@@ -6,16 +6,17 @@
     "dependencies":{
         "express":"3.0.6",
         "ejs":"*",
-        "mongoose":">=0.9.9"
+        "mongoose":">=0.9.9",
+        "colors":"*"
     },
-    "devDependencies": {
-        "should": "*",
+    "devDependencies":{
+        "should":"*",
         "chai":"*",
-        "mocha": "*",
-        "rewire": "*",
-        "jscover": "*"
+        "mocha":"*",
+        "rewire":"*",
+        "jscover":"*"
     },
-    "scripts": {
-        "test": "make test"
+    "scripts":{
+        "test":"make test"
     }
 }
