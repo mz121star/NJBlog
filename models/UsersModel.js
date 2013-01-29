@@ -15,12 +15,6 @@ var model = {
     address:{city:String, street:String}
 };
 
-var statics = {
-    getByName:function (name, cb) {
-        this.find({name:name}, cb);
-    }
-};
-
-var UsersModel = Db('Users', model, {statics:statics});
+var UsersModel = Db('Users', model);
 
 module.exports = UsersModel;

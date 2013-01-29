@@ -3,7 +3,7 @@
  */
 
 
-var Users = require('../dao/UserDao');
+var path = require('path');
 exports.index = function (req, res) {
 
 //    var jarrick = new Users({name:'Jarrick' + Math.random() * 1000, sex:'0', phone:'12345678901',
@@ -14,6 +14,7 @@ exports.index = function (req, res) {
 
 //    Users.getById('51037e2a8a75b31c53000001');
 //    Users.getByName('Jarrick678.9289640728384');
-
-    res.render('index', { title:'NJBlog.' });
+    var html = path.normalize(__dirname + '/../views/index.html');
+    res.sendfile(html);
+//    res.render('index', { title:'NJBlog.' });
 };

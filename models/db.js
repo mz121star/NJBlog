@@ -8,8 +8,8 @@
 var config = require('../config'),
     mongoose = require('mongoose');
 
-mongoose.connect(config.connectionstring);
-//mongoose.connect('localhost','njblog');
+//mongoose.connect(config.connectionstring);
+mongoose.connect('localhost','njblog');
 //mongoose.connect(config.host);
 module.exports = function (name, model, extendMethods) {
     var schema = mongoose.Schema(model);
