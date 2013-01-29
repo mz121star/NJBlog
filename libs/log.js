@@ -24,7 +24,7 @@ var log = module.exports = function (type, message, occupied) {
         case 'version':
         case 'success':
         case 'title':
-            console.log('node-angular'.green.inverse + ' ' + message.green, occupied);
+            console.log(type.green.inverse + ' ' + message.green, occupied);
             break;
         default:
             break;

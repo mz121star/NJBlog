@@ -11,7 +11,7 @@ db.on('error', function(){
     process.exit(1);
 });
 db.once('open', function () {
-    log('warn', '%s has been connected.', config.connectionstring);
+    log('success', '%s has been connected.', config.connectionstring);
 });
 
 var models_path = __dirname + '/../models/mapping'
