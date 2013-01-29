@@ -5,16 +5,17 @@
  * Time: 11:01 AM
  * To change this template use File | Settings | File Templates.
  */
-var Db = require('./db');
-var model = {
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
+
+var schema =new Schema({
     name:String,
     password:String,
     sex:Number,
     email:String,
     phone:String,
     address:{city:String, street:String}
-};
+});
 
-var UsersModel = Db('Users', model);
+mongoose.model('Users', schema);
 
-module.exports = UsersModel;

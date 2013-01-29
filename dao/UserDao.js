@@ -5,7 +5,7 @@
  * Time: 2:31 PM
  * To change this template use File | Settings | File Templates.
  */
-var UsersModel = require('./../models/UsersModel');
+var UsersModel = require('./../models').Users;
 
 var UsersDAO = function (user) {
     this.user = user || {};

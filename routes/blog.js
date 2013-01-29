@@ -7,7 +7,7 @@
  */
 
 var BlogDao=require("../dao/BlogDao"),
-    Blog=require("../models/BlogModel");
+    Blog=require("../models");
 exports.list = function(req, res){
 //    BlogDao.create(new Blog({title:"njblog"+Math.random()*1000,content:"miao love node"}),function(error){
 //        console.log(error);
@@ -15,5 +15,6 @@ exports.list = function(req, res){
 //    BlogDao.getAll(function(err,data){
 //        console.log(data[1].title);
 //    })
+    BlogDao.getAll();
     res.send("all blogs");
 };
