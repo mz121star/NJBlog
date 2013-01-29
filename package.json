@@ -17,6 +17,7 @@
         "jscover":"*"
     },
     "scripts":{
-        "test":"make test"
+        "test":"make test",
+        "test-cov":"make test-cov"
     }
 }

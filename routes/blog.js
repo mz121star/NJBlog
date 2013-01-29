@@ -15,6 +15,8 @@ exports.list = function(req, res){
 //    BlogDao.getAll(function(err,data){
 //        console.log(data[1].title);
 //    })
-    BlogDao.getAll();
-    res.send("all blogs");
+    BlogDao.getAll(function(err,blogs){
+        res.send(blogs);
+    });
+
 };
