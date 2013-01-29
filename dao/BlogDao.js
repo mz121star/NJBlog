@@ -7,7 +7,8 @@
  */
 
 var DaoBase = require('./DaoBase'),
-    Blog = require('./../models/BlogModel');
+    models = require('./../models'),
+    Blog=models.Blog;
 
 var BlogDao = new DaoBase(Blog);
 

@@ -5,10 +5,10 @@
  * Time: 下午4:54
  * To change this template use File | Settings | File Templates.
  */
-var Db = require('./db');
-var Schema = require('mongoose').Schema;
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
 
-var model = {
+var schema = new Schema({
     title:{ type:String },
     content:{ type:String },
     author_id:{ type:Schema.ObjectId },
@@ -21,7 +21,6 @@ var model = {
     last_reply:{ type:Schema.ObjectId },
     last_reply_at:{ type:Date, default:Date.now },
     content_is_html:{ type:Boolean }
-};
-var BlogModel = Db('Blog', model);
+});
 
-module.exports = BlogModel;
+mongoose.model('Blog', schema);
