@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Unit Tests Runner: NJBlog</title>
+
+    <!-- Mocha -->
+    <link rel="stylesheet" href="../libs/mocha/mocha.css" />
+    <script src="../libs/mocha/mocha.js"></script>
+    <script>mocha.setup('bdd');</script>
+
+    <!-- Chai -->
+    <script src="../libs/chai.js"></script>
+    <script>chai.Should();</script>
+</head>
+<body>
+<div id="mocha"></div>
+
+
+<script src="./../models/index.js"></script>
+
+<script src="db.js"></script>
+
+<script>
+    window.setupTests();
+    mocha.run();
+</script>
+</body>
+</html>
