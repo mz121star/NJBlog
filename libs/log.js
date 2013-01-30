@@ -6,62 +6,45 @@
  * To change this template use File | Settings | File Templates.
  */
 require("colors");
-exports.create = function () {
-    var args= Array.prototype.slice.call(arguments,1,arguments.length);
-    args.reverse();
-    args.push(("Create:".green.inverse+arguments[0].green).toString());
-    args.reverse();
-    console.log.apply(this,args);
+var slice = Array.prototype.slice;
+exports.create = function (message) {
+    var args = slice.call(arguments);
+    args[0] = "Create:".green.inverse + message.green;
+    console.log.apply(console, args);
 };
 
-exports.patch = function () {
-    var args= Array.prototype.slice.call(arguments,1,arguments.length);
-    args.reverse();
-    args.push(("Patch:".green.inverse+arguments[0].green).toString());
-    args.reverse();
-    console.log.apply(this,args);
+exports.patch = function (message) {
+    var args = slice.call(arguments);
+    args[0] = "Patch:".blue.inverse + message.blue;
+    console.log.apply(console, args);
 };
 
-exports.warn = function () {
-    var args= Array.prototype.slice.call(arguments,1,arguments.length);
-    args.reverse();
-    args.push(("Warn:".green.inverse+arguments[0].green).toString());
-    args.reverse();
-    console.log.apply(this,args);
+exports.warn = function (message) {
+    var args = slice.call(arguments);
+    args[0] = "Warn:".yellow.inverse + message.yellow;
+    console.log.apply(console, args);
 };
 
-exports.error = function () {
-    var args= Array.prototype.slice.call(arguments,1,arguments.length);
-    args.reverse();
-    args.push(("Error:".green.inverse+arguments[0].green).toString());
-    args.reverse();
-    console.log.apply(this,args);
+exports.error = function (message) {
+    var args = slice.call(arguments);
+    args[0] = "Error:".red.inverse + message.red;
+    console.log.apply(console, args);
 };
 
-exports.success = function () {
-    var args= Array.prototype.slice.call(arguments,1,arguments.length);
-    args.reverse();
-    args.push(("Success:".green.inverse+arguments[0].green).toString());
-    args.reverse();
-    console.log.apply(this,args);
+exports.success = function (message) {
+    var args = slice.call(arguments);
+    args[0] = "Success:".green.inverse + message.green;
+    console.log.apply(console, args);
 };
 
-exports.version = function () {
-    var args= Array.prototype.slice.call(arguments,1,arguments.length);
-    args.reverse();
-    args.push(("Version:".green.inverse+arguments[0].green).toString());
-    args.reverse();
-    console.log.apply(this,args);
+exports.version = function (message) {
+    var args = slice.call(arguments);
+    args[0] = "Version:".green.inverse + message.green;
+    console.log.apply(console, args);
 };
 
-exports.title = function () {
-    var args= Array.prototype.slice.call(arguments,1,arguments.length);
-    args.reverse();
-    args.push(("Title:".green.inverse+arguments[0].green).toString());
-    args.reverse();
-    console.log.apply(this,args);
+exports.title = function (message) {
+    var args = slice.call(arguments);
+    args[0] = "Title:".green.inverse + message.green;
+    console.log.apply(console, args);
 };
-
-//function log(head, body, occupied) {
-//    console.log(head + ' ' + body, occupied || '');
-//}
