@@ -5,34 +5,63 @@
  * Time: 5:17 PM
  * To change this template use File | Settings | File Templates.
  */
-exports.create = function (message, occupied) {
-    log('create:'.green, message, occupied);
+require("colors");
+exports.create = function () {
+    var args= Array.prototype.slice.call(arguments,1,arguments.length);
+    args.reverse();
+    args.push(("Create:".green.inverse+arguments[0].green).toString());
+    args.reverse();
+    console.log.apply(this,args);
 };
 
-exports.patch = function (message, occupied) {
-    log('patch:'.magenta, message, occupied);
+exports.patch = function () {
+    var args= Array.prototype.slice.call(arguments,1,arguments.length);
+    args.reverse();
+    args.push(("Patch:".green.inverse+arguments[0].green).toString());
+    args.reverse();
+    console.log.apply(this,args);
 };
 
-exports.warn = function (message, occupied) {
-    log('warn:'.yellow.inverse, message.yellow, occupied);
+exports.warn = function () {
+    var args= Array.prototype.slice.call(arguments,1,arguments.length);
+    args.reverse();
+    args.push(("Warn:".green.inverse+arguments[0].green).toString());
+    args.reverse();
+    console.log.apply(this,args);
 };
 
-exports.error = function (message, occupied) {
-    log('error:'.red.inverse, message.red, occupied);
+exports.error = function () {
+    var args= Array.prototype.slice.call(arguments,1,arguments.length);
+    args.reverse();
+    args.push(("Error:".green.inverse+arguments[0].green).toString());
+    args.reverse();
+    console.log.apply(this,args);
 };
 
-exports.success = function (message, occupied) {
-    log('success:'.green.inverse, message.green, occupied);
+exports.success = function () {
+    var args= Array.prototype.slice.call(arguments,1,arguments.length);
+    args.reverse();
+    args.push(("Success:".green.inverse+arguments[0].green).toString());
+    args.reverse();
+    console.log.apply(this,args);
 };
 
-exports.version = function (message, occupied) {
-    log('version:'.green.inverse, message.green, occupied);
+exports.version = function () {
+    var args= Array.prototype.slice.call(arguments,1,arguments.length);
+    args.reverse();
+    args.push(("Version:".green.inverse+arguments[0].green).toString());
+    args.reverse();
+    console.log.apply(this,args);
 };
 
-exports.title = function (message, occupied) {
-    log('title:'.green.inverse, message.green, occupied);
+exports.title = function () {
+    var args= Array.prototype.slice.call(arguments,1,arguments.length);
+    args.reverse();
+    args.push(("Title:".green.inverse+arguments[0].green).toString());
+    args.reverse();
+    console.log.apply(this,args);
 };
 
-function log(head, body, occupied) {
-    console.log(head + ' ' + body, occupied || '');
-}
+//function log(head, body, occupied) {
+//    console.log(head + ' ' + body, occupied || '');
+//}
