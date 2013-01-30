@@ -6,7 +6,7 @@ var log = require('./../libs/log');
 mongoose.connect(config.connectionstring);
 
 var db = mongoose.connection;
-db.on('error', function(){
+db.on('error', function(err){
     console.error('connect to %s error: ', config.connectionstring, err.message);
     process.exit(1);
 });
