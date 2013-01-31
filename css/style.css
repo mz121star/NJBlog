@@ -1,0 +1,591 @@
+/* Website template by # */
+/*------------------------- Layout styles ------------------------*/ 
+body{
+	margin:0;
+	background:url(../images/bg-body.gif);
+}
+.page{
+	background:url(../images/bg-header.jpg) no-repeat center top;
+}
+
+/*------------------------- Font ------------------------*/ 
+@font-face {
+    font-family: 'RokkittRegular';
+    src: url('../fonts/rokkitt-regular-webfont.eot');
+    src: url('../fonts/rokkitt-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/rokkitt-regular-webfont.woff') format('woff'),
+         url('../fonts/rokkitt-regular-webfont.ttf') format('truetype'),
+         url('../fonts/rokkitt-regular-webfont.svg#RokkittRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*------------------------- Header ------------------------*/ 
+.header{
+	background:url(../images/bg-header.gif) repeat-x;
+	height:68px;
+    padding:30px 0 0;
+}
+.header div{
+	width:940px;
+	padding:0 10px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.header div a#logo{
+	display:block;
+	float:left;
+	outline:none;
+}
+.header div a#logo img{
+	border:0;
+}
+.header div ul{
+	margin:0;
+	list-style:none;
+	padding:13px 0 0;
+	float:right;
+}
+.header div ul li{
+	float:left;
+	margin:0 0 0 20px;
+}
+.header div ul li a:hover{
+	color:#3b7193;
+}
+.header div ul li.selected a{
+	font-weight:bold;
+	color:#3b7193;
+}
+.header div ul li:first-child a{
+	background:none;
+}
+.header div ul li a{
+	font-size:16px;
+	text-shadow: 0 1px 0 #d1e6f7;
+	text-decoration:none;
+	color:#6cb2e6;
+	font-family: 'RokkittRegular';
+	outline:none;
+	background:url(../images/interface.gif) no-repeat left 0;
+	padding:0 0 0 20px;
+}
+
+/*------------------------- Body ------------------------*/ 
+.body{
+	background:url(../images/bg-content.gif) repeat-x #90C5E7;
+}
+.body div:first-child{
+	background:url(../images/top-border.gif) repeat-x left bottom;
+	padding-bottom: 2px;
+}
+.body div div#featured{
+	background:url(../images/flowerwheel.jpg) no-repeat center top !important;
+	height:507px;
+	padding: 0 10px !important;
+	margin:0 auto;
+	width:940px;
+}
+.body div div#featured h3{
+	color:#fff;
+	font-size:28px;
+	line-height:28px;
+	text-shadow: 0 10px 3px #9ec7e5;
+	font-family: 'RokkittRegular';
+	margin:75px 0 20px 29px;
+	width:360px;
+	padding:10px 0 30px;
+	font-weight:normal;
+	text-align:center;
+	background:url(../images/interface.png) no-repeat left -107px;
+}
+.body div div#featured p{
+	width:360px;
+	color:#31607e;
+	font-family:arial;
+	font-size:14px;
+	line-height:25px;
+	text-shadow: 0 1px 0 #d6f0ff;
+	text-align:justify;
+	margin:0 0 0 29px;
+}
+.body div div#featured a{
+	background:url(../images/interface.png) no-repeat 0 20px;
+	border:0;
+    height:102px;
+    width:392px;
+	font-family: 'RokkittRegular';
+	color:#32617f;
+	font-size:20px;
+	font-weight:bold;
+	margin:0;
+	outline:none;
+	display:block;
+	text-decoration:none;
+	text-align:center;
+	line-height:95px;
+	text-shadow: 0 1px 0 #dbebfa;
+}
+.body div{
+	background:url(../images/bg-content2.gif);
+}
+.body div ul.blog{
+	list-style:none;
+	margin:0 auto;
+	padding:0 10px 50px;
+	background:url(../images/separator.jpg) no-repeat center top;
+	overflow:hidden;
+	width:940px;
+}
+.body div ul.blog li:first-child{
+	margin:0;
+}
+.body div ul.blog li{
+	float:left;
+	margin:0 0 0 83px;
+	height:auto;
+	padding:0;
+	text-align:center;
+	width:258px;
+}
+.body div ul.blog li a img:hover{
+	filter:alpha(opacity=80); /* Needed for IE8 and old versions */
+	opacity:0.8;
+}
+.body div ul.blog li p{
+	width:258px;
+	text-align:justify;
+	color:#828081;
+	font-family:arial;
+	margin:17px 0 0;
+	line-height:21px;
+	font-size:12px;
+	background:none;
+	padding:0;
+}
+.body div ul.blog li a:first-child{
+	margin:25px 0 0;
+	padding:0;
+	background:none;
+	width:auto;
+	height:auto;
+	line-height:0;
+}
+.body div ul.blog li a:hover{
+	color:#6CB2E6;
+}
+.body div ul.blog li a{
+	color:#33627e;
+	font-family: 'RokkittRegular';
+	text-decoration:none;
+	display:block;
+	margin:15px auto;
+	width: 218px;
+	height:74px;
+	background:url(../images/bg-readmore.gif) no-repeat center top;
+	outline:none;
+	font-size:22px;
+	font-weight:bold;
+	line-height:70px;
+	text-shadow: 0 1px 0 #d9edf8;
+}
+.body div ul.blog li a img{
+	border:0;
+}
+.body div ul.blog li a img:hover{
+	filter:alpha(opacity=99999); /* Needed for IE8 and old versions */
+	opacity:99999;
+}
+.body div h3{
+	font-family: 'RokkittRegular';
+	font-size:22px;
+	font-weight:bold;
+	color:#7e7e7e;
+	margin:15px 0 0;
+	line-height:21px;
+}
+.body div p{
+	font-family: 'RokkittRegular';
+	font-size:16px;
+	text-align:justify;
+	color:#636363;
+	margin:0 0 20px;
+	line-height:21px;
+}
+.body div p a{
+	outline:none;
+	color:#636363;
+}
+.body div ul{
+	list-style:none;
+    margin:0;
+    padding:0;
+	overflow:hidden;
+}
+.body div ul li:first-child{
+	background:none;
+}
+.body div ul li{
+	overflow:hidden;
+	background:url(../images/separator.jpg) no-repeat center top;
+	padding:30px 0;
+}
+.body div ul li div.featured{
+	width:281px;
+	height:292px;
+	text-align: center;
+	margin:0;
+}
+.body div ul li div.featured img{
+	margin:10px 0 0 -3px;
+	border:0;
+}
+.body div ul li div.featured ul{
+	overflow:hidden;
+	margin:2px 0 0 10px;
+	
+}
+.body div ul li div.featured ul li:first-child{
+	margin:0;
+}
+.body div ul li div.featured ul li{
+	float:left;
+	margin:0 0 0 18px;
+	background:none;
+	padding:0;
+}
+.body div ul li div.featured ul li a{
+	padding:0;
+}
+.body div ul li div.featured ul li a img{
+	margin:0;
+}
+.body div ul li div.featured ul li a img:hover{
+	filter:alpha(opacity=80); /* Needed for IE8 and old versions */
+	opacity:0.8;
+}
+.body div ul li div.featured a{
+	clear:both;
+	display:block;
+	font-size:13px;
+	font-family: 'RokkittRegular';
+	text-decoration:none;
+	color:#8a8889;
+	font-weight:bold;
+	padding:5px 0 0;
+	width:auto;
+	outline:none;
+}
+.body div div{
+	width:940px;
+	padding: 0 10px 54px !important; 
+	margin:0 auto;
+	background:url(../images/bg-content3.jpg) no-repeat center top!important;
+	overflow:hidden;
+}
+.body div div div:first-child{
+	padding: 65px 30px 0 0 !important;
+}
+.body div div div{
+	float:left;
+	background:none!important;
+	padding: 65px 0 0 30px !important;
+	width:440px;
+}
+.body div div div h3{
+	margin:0;
+	color:#305872;
+	font-size:16px;
+	font-weight:bold;
+	font-family: 'RokkittRegular';
+	text-shadow: 0 1px 0 #d4efff;
+}
+.body div div div p{
+	color:#305872;
+	font-family: 'RokkittRegular';
+	font-size:16px;
+	text-shadow: 0 1px 0 #d4efff;
+}
+.body div div div p a{
+	color:#305872;
+}
+
+
+.body div div ul.blog{
+	list-style:none;
+	padding:60px 10px 5px;
+	overflow:hidden;
+	margin:0 auto;
+	width:940px;
+}
+.body div div ul.blog li:first-child{
+	margin:0;
+	padding:0;
+	background:url(../images/separator-horizontal.jpg) repeat-x center bottom;
+}
+.body div div ul.blog li{
+	float:left;
+	margin:30px 0 0;
+	height:auto;
+	padding:0;
+	
+	width:auto;
+}
+.body div div ul.blog li div{
+	width:600px;
+	height:auto;
+	text-align:left;
+	padding: 8px 0 30px!important;
+	float:left;
+	margin:0 0 0 50px;
+	background:none;
+}
+.body div div ul.blog li div a img{
+	border:0;
+	margin:0 0 0 -3px;
+}
+.body div div ul.blog li div a img:hover{
+	filter:alpha(opacity=80); /* Needed for IE8 and old versions */
+	opacity:0.8;
+}
+.body div div ul.blog li div h3{
+	color:#edede3;
+	text-shadow:0 1px 0 #9fbbd1;
+	font-size:22px;
+    margin:13px 0 0;
+}
+.body div div ul.blog li div p{
+	width:auto;
+	text-align:justify;
+	color:#345d79;
+	font-family:arial;
+	margin:17px 0 0 0;
+	line-height:20px;
+	font-size:12px;
+	background:none;
+	padding:0;
+}
+.body div div ul.blog li div p a{
+	color:#fff;
+}
+.body div div ul.blog li div a{
+	background:none;
+	float:left;
+	margin:0;
+	text-shadow: 0 1px 0 #9bbbd4;
+	color:#EDEDE3;
+	font-size:18px;
+}
+.body div div ul.blog li div a:hover{
+	color:#345d79!important;
+}
+.body div div ul.blog li div a:first-child{
+	margin:0;
+	padding:0;
+	background:none;
+	width:auto;
+}
+.body div div ul.blog li div a:hover{
+	color:#F78117;
+}
+.body div div ul.blog li div.featured{
+	float:left;
+    height:294px;
+    margin:0;
+    padding: 0 !important;
+    width:284px;
+	text-align:center;
+	background:url(../images/interface.png) no-repeat 0 -338px!important;
+}
+.body div div ul.blog li div.featured img{
+	margin:8px 0 0 -3px;
+}
+.body div div ul.blog li div.featured ul{
+	margin:5px 0 0 12px;
+}
+.body div div ul.blog li div.featured ul li:first-child{
+	margin:0;
+}
+.body div div ul.blog li div.featured ul li{
+	margin:0 0 0 18px;
+	height:auto;
+}
+.body div div ul.blog li div.featured ul li a{
+	width:74px;
+ 	display:block;
+	margin:0;
+    padding:0;
+	height: 74px;
+}
+.body div div ul.blog li div.featured ul li a img{
+	margin:0;
+}
+.body div div ul.blog li div.featured a{
+	color:#858585;
+	font-family:arial;
+	float:none;
+	font-style:italic;
+	text-decoration:none;
+	padding:0;
+	margin:0 auto;
+	display:block;
+	width: 150px;
+	outline:none;
+	font-size:12px;
+	font-weight:normal;
+	text-shadow:0 1px 0 #fcfcfc;
+	line-height:30px;
+}
+.body div ul#blog{
+	padding-bottom: 40px;
+}
+.body div ul#blog li a{
+	margin: -47px 0 0 80px;
+	position: absolute;
+}
+.body div ul#blog li h3{
+	margin-top: 55px;
+}
+.body div div ul.paging{
+	margin:0 0 30px 0;
+	background:url(../images/separator-horizontal.jpg) repeat-x center top;
+	width:960px;
+	text-align:center;
+	padding:20px 0 0;
+}
+.body div div ul.paging li{
+	display:inline;
+	padding:0 5px;
+	background:none!important;
+}
+.body div div ul.paging li a{
+	text-decoration:none;
+	color:#f6f0e4;
+	font-family: arial;
+	font-size:12px;
+	text-shadow: 0 1px 0 #a2b9c1;
+}
+.body div div ul.paging li a:hover{
+	color:#3B7193;
+}
+.body div div div a#join{
+	background:url(../images/interface.png) no-repeat 0 -221px;
+	width:388px;
+	height:97px;
+	display:block;
+	text-align:center;
+	text-decoration:none;
+	font-family: 'RokkittRegular';
+	font-size:20px;
+	color:#39657e;	
+	text-shadow: 0 1px 0 #d7eaf8;
+	font-weight: bold;
+	line-height: 57px;
+	margin: 20px 0 0 30px;
+	outline:none;
+}
+
+/*------------------------- Footer ------------------------*/ 
+.footer{
+	width:auto;
+	background:url(../images/bg-footer.gif) repeat-x left top;
+	padding:45px 0 105px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.footer div{
+	width:960px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.footer div ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	float:left;
+}
+.footer div ul li{
+	margin:0 0 5px;
+}
+.footer div ul li a:hover{
+	color:#6CB2E6;
+}
+.footer div ul li a{
+	color:#d5ebf8;
+	font-size:18px;
+	font-family: 'RokkittRegular';
+	text-decoration:none;
+	outline:none;
+	line-height:35px;
+}
+.footer div p{
+	color:#22323f;
+	font-size:12px;
+	font-family:arial;
+	float:left;
+	margin:0 0 0 65px;
+	width:555px;
+	text-align:justify;
+	text-shadow: 0 1px 0 #99abb9;
+	line-height:21px;
+}
+.footer div p a{
+	color:#fff;
+}
+.footer div div.connect{
+	float:left;
+	margin:0 0 0 50px;
+	width:auto;
+	height:150px;
+	background:url(../images/interface.gif) no-repeat left -33px;
+}
+.footer div div.connect a:hover{
+	color:#3d4f5b;
+}
+.footer div div.connect a{
+	outline:none;
+	height:28px;
+	width:auto;
+	text-decoration:none;
+	margin:10px 0 0 45px;
+	font-family:arial;
+	color:#fff;
+	font-weight:bold;
+	text-shadow:0 1px 0 #546a77;
+	text-transform:capitalize;
+	font-size:14px;
+}
+.footer div div.connect a#facebook{
+	display:block;
+	background:url(../images/icons.gif) no-repeat 0 -48px;
+	line-height:25px;
+    padding:0 0 0 80px;
+	margin-bottom: 25px;
+}
+.footer div div.connect a#twitter{
+	display:block;
+	background:url(../images/icons.gif) no-repeat 0 -96px;
+	line-height:25px;
+	padding:0 0 0 90px;
+}
+.footer div div.connect a#vimeo{
+	display:block;
+	background:url(../images/icons.gif) no-repeat;
+	line-height:25px;
+	padding:0 0 0 90px;
+	margin-bottom:25px;
+}
+.footer div p.footnote{
+	text-shadow: 0 1px 0 #99abb9;
+	color:#3e505c;
+	clear:both;
+	text-align:center;
+	margin:0;
+	float:none;
+	width:auto;
+	font-size:10px;
+	font-family:trebuchet MS;
+	font-weight:bold;
+	padding:30px 0 0;
+}
