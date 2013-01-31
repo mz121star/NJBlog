@@ -7,8 +7,11 @@ body{
 .page{
 	background:url(../images/bg-header.jpg) no-repeat center top;
 }
-
-/*------------------------- Font ------------------------*/ 
+::selection {
+    background: #FF5F3E;
+    color: #ffffff;
+}
+/*------------------------- Font ------------------------*/
 @font-face {
     font-family: 'RokkittRegular';
     src: url('../fonts/rokkitt-regular-webfont.eot');
