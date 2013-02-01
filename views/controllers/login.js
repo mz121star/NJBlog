@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-var LoginController = ["$scope", function ($scope) {
+var LoginController = ["$scope", "$rootScope", function ($scope, $rootScope) {
     $scope.name = "jarrick";
+    $rootScope.title = "Login";
 }];

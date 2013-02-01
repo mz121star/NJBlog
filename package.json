@@ -5,9 +5,12 @@
     "main":"app.js",
     "dependencies":{
         "express":"3.0.6",
-        "ejs":"*",
+        "ejs":"latest",
         "mongoose":">=0.9.9",
-        "colors":"*"
+        "colors":"latest",
+        "mongodb":"latest",
+        "connect-mongo":"latest",
+        "connect-flash":"latest"
     },
     "devDependencies":{
         "should":"*",

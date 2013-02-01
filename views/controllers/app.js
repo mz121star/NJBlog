@@ -11,5 +11,6 @@ app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
         when('/', {templateUrl:'/index.html', controller:IndexController}).
         when('/login', {templateUrl:'/login.html', controller:LoginController}).
+        when('/signup', {templateUrl:'/signup.html', controller:SignUpController}).
         otherwise({redirectTo:'/login'});
 }]);
