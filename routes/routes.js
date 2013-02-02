@@ -12,7 +12,5 @@ var blog = require('./blog');
 module.exports = function (app) {
     app.get('/', index.index);
     app.get('/list', user.list);
-    app.get('/blog', blog.list);
-    app.get('/user', user.list);
-    app.post('/signup', user.create);
+    app.get('/blog',blog.list);
 };

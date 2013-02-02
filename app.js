@@ -8,10 +8,7 @@ var express = require('express')
     , http = require('http')
     , path = require('path')
     , fs = require('fs')
-    , colors = require('colors')
-//, MongoStore = require("connect-mongo")(express)
-    , config = require("./config")
-    , flash = require("connect-flash");
+    , colors = require('colors');
 
 var app = express();
 
@@ -23,15 +20,8 @@ app.configure(function () {
     app.use(express.logger('dev'));
     app.use(express.bodyParser());
     app.use(express.methodOverride());
-    app.use(express.cookieParser(config.cookieSecret));
-//    app.use(express.session({
-//        secret:config.cookieSecret,
-//        store:new MongoStore({
-//            url:config.connectionstring
-//        })
-//    }));
+    app.use(express.cookieParser('your secret here'));
     app.use(express.session());
-    app.use(flash());
     app.use(app.router);
     app.use(express.static(path.join(__dirname, 'public')));
     app.use(express.static(path.join(__dirname, 'views/controllers')));
