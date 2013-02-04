@@ -3,6 +3,7 @@
  */
 
 var UsersModel = require("./../models").Users;
+var path = require('path');
 
 exports.list = function (req, res) {
     res.send("respond with a resource");
@@ -37,6 +38,12 @@ exports.login = function (req, res) {
         if (!user.authenticate(req.body.password))
             return res.json({err:'密码错误'});
         req.session["user"] = user;
-        res.json();
+        res.json(user);
     });
+};
+
+exports.logout = function (req, res) {
+    req.session["user"] = null;
+    var html = path.normalize(__dirname + '/../views/index.html');
+    res.sendfile(html);
 };
