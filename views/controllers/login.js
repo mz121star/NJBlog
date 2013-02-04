@@ -6,7 +6,20 @@
  * To change this template use File | Settings | File Templates.
  */
 
-var LoginController = ["$scope", "$rootScope", function ($scope, $rootScope) {
-    $scope.name = "jarrick";
+var LoginController = ["$scope", "$rootScope", "$http", "$location", function ($scope, $rootScope, $http, $location) {
     $rootScope.title = "Login";
+
+    $scope.user = {
+        name:'',
+        password:''
+    };
+
+    $scope.login = function () {
+        $http.post('/login', $scope.user).success(function (data) {
+            if (data.err) {
+                return $scope.err = data.err;
+            }
+            $location.path("/");
+        });
+    };
 }];

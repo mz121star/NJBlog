@@ -9,7 +9,8 @@ var SignUpController = ["$scope", "$rootScope", "$http", "$location", function (
     $rootScope.title = "SignUp";
     $scope.user = {
         name:'',
-        password:''
+        password:'',
+        repeatpassword:''
     };
 
     $scope.createClick = function () {

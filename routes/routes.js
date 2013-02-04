@@ -15,4 +15,5 @@ module.exports = function (app) {
     app.get('/blog', blog.list);
     app.get('/user', user.list);
     app.post('/signup', user.create);
+    app.post('/login', user.login);
 };

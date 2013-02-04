@@ -9,12 +9,34 @@ exports.list = function (req, res) {
 };
 
 exports.create = function (req, res) {
-    var user = new UsersModel(req.body);
-    user.save(function (err, data) {
-        if (err) {
+    var createUser = new UsersModel(req.body);
+    UsersModel.findOne({name:req.body.name}, function (err, user) {
+        if (err)
             return res.json({err:err});
+        if (user) {
+            return res.json({err:"用户名已经存在"});
         }
-        req.session["user"] = data;
+        createUser.save(function (err, user) {
+            if (err) {
+                return res.json({err:err});
+            }
+            req.session["user"] = user;
+            res.json();
+        });
+    });
+
+};
+
+exports.login = function (req, res) {
+    UsersModel.findOne({name:req.body.name}, function (err, user) {
+        if (err)
+            return res.json({err:err});
+        if (!user) {
+            return res.json({err:'用户名不存在'});
+        }
+        if (!user.authenticate(req.body.password))
+            return res.json({err:'密码错误'});
+        req.session["user"] = user;
         res.json();
     });
 };
