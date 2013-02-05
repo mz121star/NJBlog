@@ -48,7 +48,7 @@ function LayoutController($scope, $http, $window) {
 
             $scope.signup = {
                 url:'',
-                name:user.name
+                name:'welcome:'+user.name
             };
         } else {
             $scope.login = {
