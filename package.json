@@ -10,7 +10,8 @@
         "colors":"latest",
         "mongodb":"latest",
         "connect-mongo":"latest",
-        "connect-flash":"latest"
+        "connect-flash":"latest",
+        "requirejs":"latest"
     },
     "devDependencies":{
         "should":"*",
