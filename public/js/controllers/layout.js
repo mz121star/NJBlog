@@ -1,6 +1,6 @@
 'use strict';
 //TODO Define module
-define(['app'], function (app) {
+define(['../app'], function (app) {
     return app.controller('LayoutController', function ($scope, $http, $window) {
             $http.get('/checklogin').success(function (user) {
                 $scope.resetLogin(user);

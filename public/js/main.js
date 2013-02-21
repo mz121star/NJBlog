@@ -21,7 +21,7 @@ require.config({
 });
 
 require(['angular',
-         'app',
+         'app','bootstrap',
          'controllers/layout',
          'controllers/index',
          'directives/compare',

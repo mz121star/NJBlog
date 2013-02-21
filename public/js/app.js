@@ -34,7 +34,12 @@ define(['angular', 'controllers/layout', 'controllers/index', 'controllers/login
 */
 
 'use strict';
-define(['angular'], function (angular) {
-    return angular.module('app', []);
+
+define(['angular', 'utils/route-config'], function (angular, routeConfig, lazyDirectives) {
+
+    return angular.module('app', [], function ($compileProvider, $controllerProvider) {
+        routeConfig.setCompileProvider($compileProvider);
+        routeConfig.setControllerProvider($controllerProvider);
+    })
 });
 
