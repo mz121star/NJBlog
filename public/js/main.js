@@ -1,6 +1,7 @@
  require.config({
     paths: {
-        angular: 'angular.min'
+        angular: 'angular'
+
     },
     shim: {
         angular: {
@@ -9,6 +10,6 @@
     }
 });
 
-require(['angular', 'app', 'controllers/todo', 'directives/todoFocus', 'directives/todoBlur'], function (angular) {
-    angular.bootstrap(document, ['todomvc']);
+require(['angular', 'app', 'controllers/layout', 'directives/compare'], function (angular) {
+    angular.bootstrap(document, ['app']);
 });

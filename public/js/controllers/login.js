@@ -5,7 +5,7 @@
  * Time: 10:01 AM
  * To change this template use File | Settings | File Templates.
  */
-
+//TODO Define module
 var LoginController = ["$scope", "$rootScope", "$http", "$location",
     function ($scope, $rootScope, $http, $location) {
         $rootScope.title = "Login";

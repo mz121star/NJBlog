@@ -5,6 +5,7 @@
  * Time: 10:21 AM
  * To change this template use File | Settings | File Templates.
  */
+//TODO Define module
 var IndexController = ["$scope", "$rootScope", "$http" , function ($scope, $rootScope, $http) {
     $scope.title = "NJBlog";
     $rootScope.title = "NJBlog";
