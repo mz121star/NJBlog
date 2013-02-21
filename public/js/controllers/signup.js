@@ -7,6 +7,7 @@
  */
 
 //TODO Define module
+define(['../app'], function (app) {
 var SignUpController = ["$scope", "$rootScope", "$http", "$location", function ($scope, $rootScope, $http, $location) {
     $rootScope.title = "SignUp";
     $scope.user = {
@@ -24,3 +25,5 @@ var SignUpController = ["$scope", "$rootScope", "$http", "$location", function (
         });
     };
 }];
+    return SignUpController;
+});

@@ -34,7 +34,7 @@ app.configure(function () {
     app.use(flash());
     app.use(app.router);
     app.use(express.static(path.join(__dirname, 'public')));
-    app.use(express.static(path.join(__dirname, 'views/controllers')));
+    app.use(express.static(path.join(__dirname, 'js/controllers')));
     app.use(express.static(path.join(__dirname, 'views/partials')));
 });
 

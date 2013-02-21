@@ -5,18 +5,36 @@
  * Time: 9:57 AM
  * To change this template use File | Settings | File Templates.
  */
-define(['angular','controllers/layout','controllers/index','controllers/login','controllers/signup'], function (angular) {
+/*
+define(['angular', 'controllers/layout', 'controllers/index', 'controllers/login', 'controllers/logout', 'controllers/signup'],
+    function (angular, layout, index, login, logout, singnup) {
+  */
+/*      var app = angular.module('app', []);
+        app.config(['$routeProvider', function ($routeProvider) {
+            $routeProvider.
+                when('/', {templateUrl:'/index.html', controller:layout}).
+                when('/login', {templateUrl:'/login.html', controller:login}).
+                when('/logout', {templateUrl:'/logout.html', controller:logout}).
+                when('/signup', {templateUrl:'/signup.html', controller:singnup}).
+                otherwise({redirectTo:'/login'});
+        }]);
 
-var app = angular.module('app', []);
-app.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.
-        when('/', {templateUrl:'/index.html', controller:IndexController}).
-        when('/login', {templateUrl:'/login.html', controller:LoginController}).
-        when('/logout', {templateUrl:'/logout.html', controller:LogoutController}).
-        when('/signup', {templateUrl:'/signup.html', controller:SignUpController}).
-        otherwise({redirectTo:'/login'});
-}]);
+        return app;*//*
 
-return app;
-
+        return angular.module('app', []).
+            config(['$routeProvider', function ($routeProvider) {
+            $routeProvider.
+                when('/', {templateUrl:'/index.html', controller:layout}).
+                when('/login', {templateUrl:'/login.html', controller:login}).
+                when('/logout', {templateUrl:'/logout.html', controller:logout}).
+                when('/signup', {templateUrl:'/signup.html', controller:singnup}).
+                otherwise({redirectTo:'/login'});
+        }]);
 });
+*/
+
+'use strict';
+define(['angular'], function (angular) {
+    return angular.module('app', []);
+});
+

@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 //TODO Define module
+define(['../app'], function (app) {
 var LoginController = ["$scope", "$rootScope", "$http", "$location",
     function ($scope, $rootScope, $http, $location) {
         $rootScope.title = "Login";
@@ -25,12 +26,5 @@ var LoginController = ["$scope", "$rootScope", "$http", "$location",
             });
         };
     }];
-
-var LogoutController = ["$scope", "$rootScope", "$http", "$location",
-    function ($scope, $rootScope, $http, $location) {
-        $rootScope.title = "logout";
-        $http.get('/logout').success(function () {
-            $scope.$parent.resetLogin({});
-            $location.path("/");
-        });
-    }];
+    return LoginController;
+});
