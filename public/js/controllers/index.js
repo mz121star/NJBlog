@@ -15,11 +15,11 @@ define(['../app'], function (app) {
 });*/
 'use strict';
 
-define([], function () {
+define([ 'i18n!resources/nls/res'], function (res) {
 
     var  IndexController=['$scope','$rootScope',function($scope,$rootScope) {
-        $scope.title = "NJBLog simple ,fluent";
-        $rootScope.title= "NJBLog simple ,fluent";
+        $scope.title = res.title;
+        $rootScope.title= res.title;
     }];
 
     return IndexController;
