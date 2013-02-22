@@ -1,3 +1,4 @@
+/*
 define(['app', 'utils/route-config'], function (app, routeConfig) {
 
         return app. config(['$routeProvider', function ($routeProvider) {
@@ -8,5 +9,18 @@ define(['app', 'utils/route-config'], function (app, routeConfig) {
                 when('/signup', routeConfig.config('../partials/signup.html','controllers/signup')).
 
                 otherwise({redirectTo:'/logout'});
+        }]);
+    });
+*/
+define(['app', 'controllers/index', 'controllers/login', 'controllers/logout', 'controllers/signup'],
+    function (app, index, login, logout, singnup) {
+
+        return app. config(['$routeProvider', function ($routeProvider) {
+            $routeProvider.
+                when('/', {templateUrl:'partials/index.html', controller:index}).
+                when('/login', {templateUrl:'partials/login.html', controller:login}).
+                when('/logout', {templateUrl:'partials/logout.html', controller:logout}).
+                when('/signup', {templateUrl:'partials/signup.html', controller:singnup}).
+                otherwise({redirectTo:'/'});
         }]);
     });

@@ -8,9 +8,9 @@
 
 define({
 
-       "welcome": "Welcome",
-        "login": "Login",
-        "logout": "Logut",
-        "title":"NJBlog base on Nodejs"
+        "welcome": "歓迎",
+        "login": "登录され",
+        "logout": "ログオフ",
+        "title":"njblogベースnodejsで開発した"
 
 });

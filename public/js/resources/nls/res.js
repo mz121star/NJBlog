@@ -13,6 +13,7 @@ define({
         "logout": "注销",
         "title":"NJBlog基于nodejs"
     },
-    "en-us":true
+    "en-us":true,
+    "ja-jp":true
 
 });

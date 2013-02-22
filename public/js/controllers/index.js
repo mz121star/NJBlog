@@ -24,3 +24,11 @@ define([ 'i18n!resources/nls/res'], function (res) {
 
     return IndexController;
 });
+
+/*define(['app','i18n!resources/nls/res'], function (app,res) {
+    return app.controller('IndexController', function ($scope, $rootScope) {
+        $scope.title = res.title;
+        $rootScope.title= res.title;
+    });
+
+});*/

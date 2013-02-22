@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" ng-app="app">
 <head>
     <title>{{title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,7 @@
 
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li class="active"><a href="#/">Home</a></li>
+                        <li class="active"><a href="#/">{{txt.home}}</a></li>
                         <li class="active"><a href="#/{{login.url}}">{{login.name}}</a></li>
                         <li class="active"><a href="#/{{signup.url}}">{{signup.name}}</a></li>
                     </ul>

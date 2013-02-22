@@ -21,17 +21,17 @@ require.config({
     },
     priority: [
         "angular"
-    ],
+    ],/*,
     i18n: {
-        locale: 'en-us'
-    },
+        locale: 'ja-jp'
+    },*/
     urlArgs: 'v=1.0.0.1'
 });
 
 require(['angular',
          'app','bootstrap',
          'controllers/layout',
-         'controllers/index',
+         /*'controllers/index',*/
          'directives/compare',
          'routes'
 
