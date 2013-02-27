@@ -18,3 +18,7 @@ exports.index = function (req, res) {
     res.sendfile(html);
 //    res.render('index', { title:'NJBlog.' });
 };
+
+exports.getLoginUser = function (req, res) {
+    res.json(req.session["user"] || {});
+};

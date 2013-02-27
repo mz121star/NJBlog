@@ -13,7 +13,7 @@ var express = require('express')
 var app = express();
 
 app.configure(function () {
-    app.set('port', process.env.PORT || 3000);
+    app.set('port', process.env.PORT || 3001);
     app.set('views', __dirname + '/views');
     app.set('view engine', 'html');
     app.use(express.favicon());
@@ -24,8 +24,8 @@ app.configure(function () {
     app.use(express.session());
     app.use(app.router);
     app.use(express.static(path.join(__dirname, 'public')));
-    app.use(express.static(path.join(__dirname, 'views/controllers')));
-    app.use(express.static(path.join(__dirname, 'views/partials')));
+    /*  app.use(express.static(path.join(__dirname, 'resources')));
+      app.use(express.static(path.join(__dirname, 'views/partials')));*/
 });
 
 app.configure('development', function () {

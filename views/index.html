@@ -1,57 +1,39 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html lang="zh" ng-app="app">
 <head>
-    <title>Node Angular Blog</title>
+    <title>{{title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NJBlog, node blog system">
     <meta name="author" content="NJBlog">
-    <link rel='stylesheet' href='/css/bootstrap.min.css'/>
-    <style>
-        body {
-            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-        }
-    </style>
-    <link rel='stylesheet' href='/css/bootstrap-responsive.css'/>
+    <link rel="shortcut icon" href="">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" charset="UTF-8" src="lib/html5shiv.js"></script>
+    <![endif]-->
+    
+<!--    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>-->
+
+    <!--<link rel='stylesheet' href='lib/bootstrap/css/bootstrap-responsive.css'/>-->
+
+
+    <link rel="stylesheet" href="css/base.css" type='text/css' media="all" />
+    <link href='css/index.css' rel='stylesheet' type='text/css'>
 </head>
-<body>
-<body>
 
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="#/">Node Angular Blog</a>
+<body ng-controller="LayoutController">
+<div class="wrap_top_nav">
+    <nav id="top_nav">
+        <ul class="inline-style clearfix">
+            <li class="active"><a href="#/">{{txt.home}}</a></li>
+            <li class="active"><a href="#/{{login.url}}">{{login.name}}</a></li>
+            <li class="active"><a href="#/{{signup.url}}">{{signup.name}}</a></li>
+        </ul>
 
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <li class="active"><a href="#/">Home</a></li>
-                    <li class="active"><a href="#/login">login</a></li>
-                    <li class="active"><a href="/blog">Archive</a></li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </div>
+    </nav>
 </div>
-
-<div class="container">
-    <div ng-view></div>
-</div>
-<!-- /container -->
-
-<!-- Le javascript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="/js/jquery-1.8.3.min.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/angular.min.js"></script>
-<script src="/app.js"></script>
-<script src="/index.js"></script>
-<script src="/login.js"></script>
+<div class="page" ng-view=""> </div>
 </body>
+<script type="text/javascript" charset="UTF-8" src="lib/prefixfree.min.js"></script>
+<script data-main="js/main" src="lib/require/require-2.1.0.js"></script>
+<!--</form>-->
 </body>
 </html>
