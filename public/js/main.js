@@ -7,7 +7,9 @@ require.config({
         angular: '../lib/angular/angular',
         angularResource: '../lib/angular/angular-resource',
         text: '../lib/require/text',
-        i18n:'../lib/require/i18n'
+        i18n:'../lib/require/i18n',
+        modernizer:'../lib/modernizr',
+        html5shiv:'../lib/html5shiv'
         //res:'../resources/nls/res'
 
     },
@@ -29,7 +31,8 @@ require.config({
 });
 
 require(['angular',
-         'app','bootstrap',
+         'app','bootstrap',/*'modernizer'*/,
+
          'controllers/layout',
          'controllers/index',
          'directives/compare',
