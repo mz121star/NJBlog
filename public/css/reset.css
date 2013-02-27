@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* -------------------------------------------------
+ * reset css
+ * copyright: www.w3cplus.com
+ * author: 为之
+ * -------------------------------------------------
+*/
+html{
+    height:100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing:antialiased;
+}
+body{
+    margin:0;
+    padding:0;
+    background-color:#fff;
+    min-height:100%;
+    height:auto !important;
+    height:100%;
+    text-align:center;
+    color:#404040;
+    font:12px/1.5 Helvetica,arial;
+}
+h1,h2,h3,h4,h5,h6,p,figure,form{
+    margin:0;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+img{
+    border:0;
+    vertical-align:middle;
+    -ms-interpolation-mode: bicubic;
+}
+a{
+    text-decoration:none;
+    color:#29B4F0;
+}
+a:focus {
+    outline: thin dotted;
+}
+a:hover{
+    color:#017CB9;
+    text-decoration:underline;
+}
+/* hn */
+h1{
+    font-size:16px;
+    line-height:36px;
+}
+h2{
+    font-size:14px;
+    line-height:30px;
+}
+h3{
+    line-height:24px;
+}
+h3,h4,h5,h6{
+    font-size:12px;
+}
+/* ul ol dl */
+ul,li,ol{
+    margin: 0;
+    padding:0;
+    list-style: none outside none;
+}
+ul.has-style li,ol li{
+    margin-left:25px;
+}
+ul.has-style li{
+    list-style:disc;
+}
+ol li{
+    list-style:decimal;
+}
+ul.inline-style li{
+    float:left;
+    display:inline;
+}
+dl{
+    margin-bottom: 18px;
+}
+dt{
+    font-weight: bold;
+}
+dd{
+    margin:0 0 0 9px;
+    padding:0;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+/* clearfix */
+.clearfix:before, .clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after{
+    clear:both;
+    overflow:hidden;
+}
+.clearfix{
+    zoom:1;
+}
+/* -------------------------------------------------
+ * form
+ * -------------------------------------------------
+*/
+button,input,select,textarea{
+    font-family:tahoma;
+    font-size:100%;
+    margin: 0;
+    outline: 0 none;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+textarea{
+    overflow: auto;
+    vertical-align: top;
+    resize:none;
+}
+button,input{
+    line-height: normal;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.submit-btn{
+    -webkit-appearance: button;
+    cursor: pointer;
+    *overflow: visible;
+}
+button[disabled],
+input[disabled],
+.disable{
+    cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"],
+.form-radio,
+.form-checkbox{
+    box-sizing: border-box;
+    padding: 0;
+    *height: 13px;
+    *width: 13px;
+}
+fieldset{
+    border: 1px solid #c0c0c0;
+    margin: 0 2px 18px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend{
+    border: 0;
+    padding: 0;
+    white-space: normal;
+    *margin-left: -7px;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner{
+    border: 0;
+    padding: 0;
+}
+/* -------------------------------------------------
+ * css3 & html5
+ * -------------------------------------------------
+*/
+/* html5 */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{
+    display: block;
+}
+audio,canvas,video{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+audio:not([controls]){
+    display: none;
+    height: 0;
+}
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+input[type="search"]{
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration{
+    -webkit-appearance: none;
+}
+:-moz-placeholder,
+::-webkit-input-placeholder{
+    color: #999;
+}
+/* -------------------------------------------------
+ * 非常见标签
+ * -------------------------------------------------
+*/
+abbr[title]{
+    border-bottom: 1px dotted;
+}
+b,strong{
+    font-weight: bold;
+}
+blockquote{
+    margin: 1em 40px;
+}
+dfn{
+    font-style: italic;
+}
+mark{
+    background: #ff0;
+    color: #444;
+}
+code,kbd,pre,samp{
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+pre{
+    margin: 1em 0;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+q{
+    quotes: none;
+}
+q:before,
+q:after{
+    content: '';
+    content: none;
+}
+small{
+    font-size: 80%;
+}
+sub,sup{
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup{
+    top: -0.5em;
+}
+sub{
+    bottom: -0.25em;
+}

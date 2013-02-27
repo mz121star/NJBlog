@@ -1,3 +1,4 @@
+<!--
 username:<input type="text" name="username" ng-model="user.name" required>
 <span class="error" ng-show="myForm.username.$error.required">Required!</span>
 <br>
@@ -8,3 +9,34 @@ password:<input type="password" name="password" ng-model="user.password" require
 <div ng-show="err" ng-bind="err"></div>
 
 <button ng-disabled="myForm.$invalid" ng-click="login()">Login</button>
+
+
+-->
+
+<header id="header">
+    <hgroup class="white">
+
+    </hgroup>
+</header>
+<section class="demo">
+    <!--<form name="login-form" class="login-form" action="" method="post">-->
+    <div class="login-form" >
+        <div class="header">
+            <h1>Login Form</h1>
+            <span>Please login NJBlog,and you can free Register!</span>
+        </div>
+        <div class="content">
+            <input name="username" type="text" class="input username" placeholder="Username" ng-model="user.name" required />
+            <div class="icon-user" id="user-icon"></div>
+            <input name="password" type="password" class="input password" placeholder="Password"  ng-model="user.password" required />
+            <div class="icon-pass" id="user-pass"></div>
+        </div>
+        <div class="footer">
+            <button ng-disabled="myForm.$invalid" ng-click="login()" class="button">Login</button>
+            <input type="button" name="button" value="Register" class="register" />
+            <div ng-show="err" ng-bind="err"></div>
+        </div>
+        </div>
+ <!--   </form>-->
+
+</section>

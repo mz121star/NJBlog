@@ -1,0 +1,70 @@
+@charset "utf-8";
+@import url("reset.css");
+/* -------------------------------------------------
+ * common
+ * -------------------------------------------------
+*/
+.page{
+    text-align:left;
+    padding-top:40px;
+}
+.wrap_top_nav{
+    background-color:#333;
+    box-shadow:0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+    height:40px;
+}
+#top_nav{
+    width:1000px;
+    margin:0 auto;
+    position:relative;
+}
+#top_nav a{
+    font-size:16px;
+    line-height:40px;
+    float:left;
+    margin-right:20px;
+    color:#999;
+    text-decoration:none;
+}
+#top_nav a:hover{
+    color:#fff;
+}
+#top_nav li:nth-child(1) a{
+    background-image:url(../img/logo.png);
+    background-position: 0 -12px;
+    background-repeat: no-repeat;
+    background-size: 68px 60px;
+    padding-left:74px;
+    color:#fff;
+    width:74px;
+    overflow:hidden;
+}
+#read{
+    position:absolute;
+    right:0;
+    top:0;
+    font-family:'����';
+}
+#header{
+    text-align:center;
+}
+#header .white{
+    color:#fff;
+}
+#header .blank{
+    color:#444;
+}
+#header h1{
+    font-size:24px;
+}
+#header h2{
+    font-weight:normal;
+}
+#ad_w3cplus {
+    width: 750px;
+    margin: 100px auto;
+    text-align: center;
+}
+#ad_w3cplus .grid-ad {
+    float:left;
+}
