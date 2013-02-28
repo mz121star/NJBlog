@@ -34,7 +34,7 @@ password:<input type="password" name="password" ng-model="user.password" require
         <div class="footer">
             <button ng-disabled="myForm.$invalid" ng-click="login()" class="button">Login</button>
           <!--  <input type="button" name="button" value="Register" class="register" />-->
-            <a href="#/{{signup.url}}"  class="register">Register</a>
+            <button   ng-click="register()"  class="register">Register</button>
             <div ng-show="err" ng-bind="err"></div>
         </div>
         </div>

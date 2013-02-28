@@ -6,25 +6,34 @@
  * To change this template use File | Settings | File Templates.
  */
 //TODO Define module
-define(['../app', 'i18n!resources/nls/res'], function (app,res) {
-var LoginController = ["$scope", "$rootScope", "$http", "$location",
-    function ($scope, $rootScope, $http, $location) {
-        $rootScope.title = res.login;
+define(['../app', 'i18n!resources/nls/res'], function (app, res) {
+    var LoginController = ["$scope", "$rootScope", "$http", "$location",
+        function ($scope, $rootScope, $http, $location) {
+            $rootScope.title = res.login;
 
-        $scope.user = {
-            name:'',
-            password:''
-        };
+            $scope.user = {
+                name:'',
+                password:''
+            };
 
-        $scope.login = function () {
-            $http.post('/login', $scope.user).success(function (data) {
-                if (data.err) {
-                    return $scope.err = data.err;
-                }
-                $scope.$parent.resetLogin(data);
-                $location.path("/");
-            });
-        };
-    }];
+            $scope.login = function () {
+                $http.post('/login', $scope.user).success(function (data) {
+                    if (data.err) {
+                        return $scope.err = data.err;
+                    }
+                    $scope.$parent.resetLogin(data);
+                    $location.path("/");
+                });
+            };
+            $scope.register = function () {
+                var a = $(".login-form")[0];
+                a.style.top = "-1000px";
+                setTimeout(function () {
+                    window.location.hash = "/signup"
+                }, 2000)
+
+
+            };
+        }];
     return LoginController;
 });
