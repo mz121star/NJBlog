@@ -9,14 +9,10 @@
     <!--[if lt IE 9]>
     <script type="text/javascript" charset="UTF-8" src="lib/html5shiv.js"></script>
     <![endif]-->
-    
-<!--    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>-->
-
+    <!--    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>-->
     <!--<link rel='stylesheet' href='lib/bootstrap/css/bootstrap-responsive.css'/>-->
-
-
     <link rel="stylesheet" href="css/base.css" type='text/css' media="all" />
-    <link href='themes/glow/default.css' rel='stylesheet' type='text/css'>
+    <link href='themes/glowsimple/default.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body ng-controller="LayoutController">
@@ -26,6 +22,9 @@
             <li class="active"><a href="#/">{{txt.home}}</a></li>
             <li class="active"><a href="#/{{login.url}}">{{login.name}}</a></li>
             <li class="active"><a href="#/{{signup.url}}">{{signup.name}}</a></li>
+            <li>
+              <a href="javascript:;" class="prv"  ng-click="preimg()">上一个</a><a href="javascript:;" class="nxt" ng-click="nextimg()">下一个</a>
+            </li>
         </ul>
 
     </nav>

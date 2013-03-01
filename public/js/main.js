@@ -9,7 +9,8 @@ require.config({
         text: '../lib/require/text',
         i18n:'../lib/require/i18n',
         modernizer:'../lib/modernizr',
-        html5shiv:'../lib/html5shiv'
+        html5shiv:'../lib/html5shiv',
+        mcore:'../lib/mcore.min'
         //res:'../resources/nls/res'
 
     },
@@ -32,7 +33,7 @@ require.config({
 
 require(['angular',
          'app','bootstrap',/*'modernizer'*/,
-
+          'mcore',
          'controllers/layout',
          'controllers/index',
          'directives/compare',

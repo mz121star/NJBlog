@@ -1,13 +1,19 @@
 'use strict';
 //TODO Define module
-define(['../app', 'i18n!resources/nls/res'], function (app, res) {
+define(['../app', 'i18n!resources/nls/res','../../background/images'], function (app, res,images) {
+   /* var bgimages=require("../../background/images").imageurls;*/
+
     return app.controller('LayoutController', function ($scope, $http, $window) {
+        var i=0;
+        var imgs=images.imageurls;
+        m$.Image.preLoadImages(imgs);
         $http.get('/checklogin').success(function (user) {
             $scope.resetLogin(user);
         });
         $scope.txt = {
             home:res.welcome
         };
+
         $scope.resources = {
             theme:" <link href='themes/glow/default.css' rel='stylesheet' type='text/css'>"
         };
@@ -32,6 +38,15 @@ define(['../app', 'i18n!resources/nls/res'], function (app, res) {
                     name:'SignUp'
                 };
             }
+        };
+
+        $scope.nextimg = function () {
+            i=i===imgs.length?0:i;
+            $("body").attr("style","background:url('themes/glowsimple/img/dots.png') center center fixed, url('"+imgs[i++]+"') center center no-repeat fixed;");
+        };
+        $scope.preimg = function () {
+            i=i<0?imgs.length-1:i;
+            $("body").attr("style","background:url('themes/glowsimple/img/dots.png') center center fixed, url('"+imgs[i--]+"') center center no-repeat fixed;");
         };
     });
 });

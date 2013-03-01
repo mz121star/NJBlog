@@ -26,13 +26,13 @@ define(['../app', 'i18n!resources/nls/res'], function (app, res) {
                 });
             };
             $scope.register = function () {
-                var a = $(".login-form")[0];
+               /* var a = $(".login-form")[0];
                 a.style.top = "-1000px";
                 setTimeout(function () {
                     window.location.hash = "/signup"
                 }, 2000)
-
-
+*/
+                window.location.hash = "/signup";
             };
         }];
     return LoginController;
