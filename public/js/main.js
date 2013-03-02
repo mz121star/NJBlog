@@ -32,7 +32,8 @@ require.config({
 });
 
 require(['angular',
-         'app','bootstrap',/*'modernizer'*/,
+         'app',
+         'bootstrap',/*'modernizer'*/,
           'mcore',
          'controllers/layout',
          'controllers/index',

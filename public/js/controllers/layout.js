@@ -5,8 +5,9 @@ define(['../app', 'i18n!resources/nls/res','../../background/images'], function 
 
     return app.controller('LayoutController', function ($scope, $http, $window) {
         var i=0;
+        var imgloadindex=0
         var imgs=images.imageurls;
-        m$.Image.preLoadImages(imgs);
+        m$.Image.preLoadImages(imgs.slice(imgloadindex,4));
         $http.get('/checklogin').success(function (user) {
             $scope.resetLogin(user);
         });
@@ -43,10 +44,14 @@ define(['../app', 'i18n!resources/nls/res','../../background/images'], function 
         $scope.nextimg = function () {
             i=i===imgs.length?0:i;
             $("body").attr("style","background:url('themes/glowsimple/img/dots.png') center center fixed, url('"+imgs[i++]+"') center center no-repeat fixed;");
+            imgloadindex=imgloadindex+4;
+            m$.Image.preLoadImages(imgs.slice(imgloadindex,4));
         };
         $scope.preimg = function () {
             i=i<0?imgs.length-1:i;
             $("body").attr("style","background:url('themes/glowsimple/img/dots.png') center center fixed, url('"+imgs[i--]+"') center center no-repeat fixed;");
+            imgloadindex=imgloadindex+4
+            m$.Image.preLoadImages(imgs.slice(imgloadindex,4));
         };
     });
 });
