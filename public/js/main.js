@@ -10,7 +10,8 @@ require.config({
         i18n:'../lib/require/i18n',
         modernizer:'../lib/modernizr',
         html5shiv:'../lib/html5shiv',
-        mcore:'../lib/mcore.min'
+        mcore:'../lib/mcore.min',
+        fullscreen:'../lib/fullscreen'
         //res:'../resources/nls/res'
 
     },
@@ -32,13 +33,14 @@ require.config({
 });
 
 require(['angular',
-         'app','bootstrap',/*'modernizer'*/,
-          'mcore',
+         'app',/*'bootstrap'*/,/*'modernizer'*/
+         'jquery',
+          'fullscreen',
+         'mcore',
          'controllers/layout',
          'controllers/index',
          'directives/compare',
          'routes'
-
 ], function (angular) {
     angular.bootstrap(document, ['app']);
 });

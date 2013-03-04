@@ -10,9 +10,10 @@ body {
     text-decoration: none;
     overflow: hidden;
     /*background: none;*/
-    background-color: #252326;
+
+   /* background-color: #252326;
     background: url('img/dots.png') center center fixed, url('img/bg.jpg') center center no-repeat fixed;
-    background-size: auto, cover;
+    background-size: auto, cover;*/
 }
 
 @font-face {
