@@ -1,13 +1,14 @@
 'use strict';
 //TODO Define module
-define(['../app', 'i18n!resources/nls/res','../../background/images'], function (app, res,images) {
-   /* var bgimages=require("../../background/images").imageurls;*/
+define(['../app', 'i18n!resources/nls/res', '../../background/images'], function (app, res, images) {
+    /* var bgimages=require("../../background/images").imageurls;*/
 
-    return app.controller('LayoutController', function ($scope, $http, $window) {
-        var i=0;
-        var imgloadindex=0
-        var imgs=images.imageurls;
-        m$.Image.preLoadImages(imgs.slice(imgloadindex,4));
+    return app.controller('LayoutController', function ($scope, $http) {
+        var i = 0,
+            imgs = images.imageurls,
+            randombg =function(){return Math.round(Math.random() * (imgs.length - 1))};
+
+        m$.Image.preLoadImages(imgs);
         $http.get('/checklogin').success(function (user) {
             $scope.resetLogin(user);
         });
@@ -16,7 +17,8 @@ define(['../app', 'i18n!resources/nls/res','../../background/images'], function 
         };
 
         $scope.resources = {
-            theme:" <link href='themes/glow/default.css' rel='stylesheet' type='text/css'>"
+            theme:" <link href='themes/glow/default.css' rel='stylesheet' type='text/css'>",
+            bg:imgs[randombg()] //Random generate background image
         };
         $scope.resetLogin = function (user) {
             if (user.name) {
@@ -36,22 +38,35 @@ define(['../app', 'i18n!resources/nls/res','../../background/images'], function 
                 };
                 $scope.signup = {
                     url:'signup',
-                    name:'SignUp'
+                    name:res.signup
                 };
             }
         };
 
         $scope.nextimg = function () {
-            i=i===imgs.length?0:i;
-            $("body").attr("style","background:url('themes/glowsimple/img/dots.png') center center fixed, url('"+imgs[i++]+"') center center no-repeat fixed;");
-            imgloadindex=imgloadindex+4;
-            m$.Image.preLoadImages(imgs.slice(imgloadindex,4));
+            i = i === imgs.length ? 0 : i;
+            $("#bg").attr("src", imgs[i++]);
         };
         $scope.preimg = function () {
-            i=i<0?imgs.length-1:i;
-            $("body").attr("style","background:url('themes/glowsimple/img/dots.png') center center fixed, url('"+imgs[i--]+"') center center no-repeat fixed;");
-            imgloadindex=imgloadindex+4
-            m$.Image.preLoadImages(imgs.slice(imgloadindex,4));
+            i = i < 0 ? imgs.length - 1 : i;
+            $("#bg").attr("src", imgs[i--]);
+            /*  $("body").attr("style","background:url('themes/glowsimple/img/dots.png') center center fixed, url('"+imgs[i--]+"') center center no-repeat fixed;");*/
+        };
+        $scope.fullscreen = function () {
+            if(window.fullScreenApi.supportsFullScreen){
+                setInterval(function(){
+                    if(!document.webkitIsFullScreen){
+                       clearInterval();
+                        return
+                    }
+                    var img=imgs[randombg()];
+                    $("#bg").attr("src",img);
+                    console.log("fullscreen picture"+img);
+                },2000)
+                 window.fullScreenApi.requestFullScreen(document.getElementById('njblogbg'));
+            }else{
+                alert('就你这浏览器，基本就告别全屏功能了,赶紧卸载了吧！！！');
+            }
         };
     });
 });
