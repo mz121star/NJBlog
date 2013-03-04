@@ -90,7 +90,17 @@ HEADER
     overflow: hidden;
    /* text-indent: -2000px;*/
 }
+#top_nav li:nth-child(1) a {
 
+    background: url(img/spriteme1.png)  no-repeat -10px -22px;
+
+}
+#top_nav li:nth-child(4) a {
+
+    background: url(img/spriteme1.png) no-repeat  -10px -78px;
+     width: 48px;
+    text-indent:-2000px;
+}
 /*******************
 CONTENT
 *******************/

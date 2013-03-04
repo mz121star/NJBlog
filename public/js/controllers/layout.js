@@ -8,7 +8,7 @@ define(['../app', 'i18n!resources/nls/res', '../../background/images'], function
             imgs = images.imageurls,
             randombg =function(){return Math.round(Math.random() * (imgs.length - 1))};
 
-        m$.Image.preLoadImages(imgs);
+        m$.Image.preLoadImages(imgs.slice(0,4));
         $http.get('/checklogin').success(function (user) {
             $scope.resetLogin(user);
         });
@@ -57,9 +57,9 @@ define(['../app', 'i18n!resources/nls/res', '../../background/images'], function
                 setInterval(function(){
                     if(!document.webkitIsFullScreen){
                        clearInterval();
-                        return
+                        return;
                     }
-                    var img=imgs[randombg()];
+                    var img=imgs[i++];
                     $("#bg").attr("src",img);
                     console.log("fullscreen picture"+img);
                 },2000)
