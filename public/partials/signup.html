@@ -1,3 +1,4 @@
+<!--
 username:<input type="text" name="username" ng-model="user.name" ng-required="true">
 <span class="error" ng-show="myForm.username.$error.required">Required!</span><br/>
 
@@ -13,3 +14,47 @@ repeat-password:<input type="password" ng-model="user.repeatpassword" name="repe
 <div ng-show="err" ng-bind="err"></div>
 
 <button ng-disabled="myForm.$invalid" ng-click="createClick()">Sign Up</button>
+
+-->
+
+
+
+
+<header id="header">
+    <hgroup class="white">
+
+    </hgroup>
+</header>
+<section class="demo">
+    <!--<form name="login-form" class="login-form" action="" method="post">-->
+    <div class="login-form" >
+        <div class="header">
+            <h1>Register</h1>
+            <span>Free Register!</span>
+        </div>
+        <div class="content">
+             <input type="text" name="username" ng-model="user.name" class="input username" placeholder="Username" ng-required="true" />
+
+             <input type="password" ng-model="user.password" ng-change="user.repeatpassword=''"  class="input password"   placeholder="Password" name="password" required />
+
+
+             <input type="password" ng-model="user.repeatpassword" name="repeatpassword"   class="input password"    required compare={{user.password}} placeholder="Confirm" />
+
+
+          <!--  <input name="username" type="text" class="input username"  placeholder="Username" ng-model="user.name" required />-->
+            <div class="icon-user" id="user-icon"></div>
+
+
+            <!--<input name="password" type="password" class="input password" placeholder="Password"  ng-model="user.password" required />-->
+            <div class="icon-pass" id="user-pass"></div>
+        </div>
+        <div class="footer">
+            <button ng-disabled="myForm.$invalid" ng-click="createClick()" class="button">Sign Up</button>
+            <!--  <input type="button" name="button" value="Register" class="register" />-->
+            <button   ng-click="login()"  class="register">Login</button>
+            <div ng-show="err" ng-bind="err"></div>
+        </div>
+    </div>
+    <!--   </form>-->
+
+</section>
