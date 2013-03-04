@@ -253,6 +253,12 @@ section.blogcontent {
 #bg{
     opacity: 0.8;
 }
+ .blogcontent{
+    background: black;
+    opacity: 0.5;
+    border-radius: 10px;
+    padding: 10px;
+}
 ::selection{color:#fff;background: #ff5f3e}
 @media screen and (max-width:600px) {
     .login-form {
