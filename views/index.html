@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh" ng-app="app">
+<html lang="zh-CN" ng-controller="LayoutController" >
 <head>
     <title>{{title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +8,18 @@
     <link rel="shortcut icon" href="">
     <!--[if lt IE 9]>
     <script type="text/javascript" charset="UTF-8" src="lib/html5shiv.js"></script>
+
+
     <![endif]-->
+    <script data-main="js/main" src="lib/require/require-2.1.0.js"></script>
+<!--    <script type="text/javascript" charset="UTF-8" src="lib/angular/angular.js"></script>-->
     <!--    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>-->
     <!--<link rel='stylesheet' href='lib/bootstrap/css/bootstrap-responsive.css'/>-->
     <link rel="stylesheet" href="css/base.css" type='text/css' media="all" />
     <link href='themes/glowsimple/default.css' rel='stylesheet' type='text/css'>
 </head>
 
-<body ng-controller="LayoutController">
+<body    class="ng-cloak" ng-cloak >
 <div class="wrap_top_nav">
     <nav id="top_nav">
         <ul class="inline-style clearfix">
@@ -32,7 +36,7 @@
 <div class="page" ng-view=""> </div>
 </body>
 <script type="text/javascript" charset="UTF-8" src="lib/prefixfree.min.js"></script>
-<script data-main="js/main" src="lib/require/require-2.1.0.js"></script>
+
 <!--</form>-->
 </body>
 </html>
