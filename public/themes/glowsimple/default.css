@@ -253,6 +253,7 @@ section.blogcontent {
 #bg{
     opacity: 0.8;
 }
+::selection{color:#fff;background: #ff5f3e}
 @media screen and (max-width:600px) {
     .login-form {
         width: 300px;
