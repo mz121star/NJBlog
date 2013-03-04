@@ -92,7 +92,6 @@
 }
 
 .prv-fullscreen, .nxt-fullscreen {
-    display: none;
     position: absolute;
     top: 50%;
     color: red;
