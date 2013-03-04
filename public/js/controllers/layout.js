@@ -6,7 +6,7 @@ define(['../app', 'i18n!resources/nls/res', '../../background/images'], function
     return app.controller('LayoutController', function ($scope, $http) {
         var i = 0,
             imgs = images.imageurls,
-            randombg = Math.round(Math.random() * (imgs.length - 1));
+            randombg =function(){return Math.round(Math.random() * (imgs.length - 1))};
 
         m$.Image.preLoadImages(imgs);
         $http.get('/checklogin').success(function (user) {
@@ -18,7 +18,7 @@ define(['../app', 'i18n!resources/nls/res', '../../background/images'], function
 
         $scope.resources = {
             theme:" <link href='themes/glow/default.css' rel='stylesheet' type='text/css'>",
-            bg:imgs[randombg] //Random generate background image
+            bg:imgs[randombg()] //Random generate background image
         };
         $scope.resetLogin = function (user) {
             if (user.name) {
@@ -54,8 +54,15 @@ define(['../app', 'i18n!resources/nls/res', '../../background/images'], function
         };
         $scope.fullscreen = function () {
             if(window.fullScreenApi.supportsFullScreen){
-                $(".prv-fullscreen").css("display","block");
-                $(".nxt-fullscreen").css("display","block");
+                setInterval(function(){
+                    if(!document.webkitIsFullScreen){
+                       clearInterval();
+                        return
+                    }
+                    var img=imgs[randombg()];
+                    $("#bg").attr("src",img);
+                    console.log("fullscreen picture"+img);
+                },2000)
                  window.fullScreenApi.requestFullScreen(document.getElementById('njblogbg'));
             }else{
                 alert('就你这浏览器，基本就告别全屏功能了,赶紧卸载了吧！！！');

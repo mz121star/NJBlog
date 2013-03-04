@@ -8,6 +8,7 @@
 .page {
     text-align: left;
     padding-top: 40px;
+    position: relative;
 }
 
 .wrap_top_nav {
@@ -93,12 +94,13 @@
 
 .prv-fullscreen, .nxt-fullscreen {
     position: absolute;
-    top: 50%;
+     margin-top: -100px;
     color: red;
     float: left;
     font: 300 28px/34px 'Denk One', sans-serif;
     color: #414848;
     text-shadow: 1px 1px 0 rgba(256, 256, 256, 1.0);
+    display: block;
 
 }
 .nxt-fullscreen {float: right;right: 0}
