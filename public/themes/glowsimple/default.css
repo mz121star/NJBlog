@@ -238,7 +238,7 @@ FOOTER
     bottom: -1px;
 }
 
-section.blogcontent {
+article.blogcontent {
     margin: 0 auto;
     width: 800px;
     color: white;
@@ -259,18 +259,51 @@ section.blogcontent {
     opacity: 0.8;
 }
 
-section.blogcontent  {
+article.blogcontent {
     background: black;
     opacity: 0.8;
     border-radius: 10px;
     padding: 10px;
-    margin-bottom: 300px;
+    margin-bottom: 30px;
     transition: all 1s;
 }
 
-::selection {
-      background: #ff5f3e
+.blog {
+    margin: 10px auto 0px;
+    height: 580px;
+    overflow-y: scroll;
+    width: 870px;
 }
+
+::selection {
+    background: #ff5f3e
+}
+
+/*chrome scroll bar */
+
+::-webkit-scrollbar
+{
+    width: 3px;
+    height: 3px;
+}
+::-webkit-scrollbar-track-piece
+{
+    background-color: #ffffff;
+    -webkit-border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:vertical
+{
+    height: 5px;
+    background-color: #666;
+    -webkit-border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:horizontal
+{
+    width: 5px;
+    background-color: #666;
+    -webkit-border-radius: 3px;
+}
+
 
 @media screen and (max-width:600px) {
     .login-form {

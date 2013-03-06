@@ -46,12 +46,12 @@ define(['../app', 'i18n!resources/nls/res', '../../background/images'], function
         $scope.nextimg = function () {
             i = i === imgs.length ? 0 : i;
             $("#bg").attr("src", imgs[i++]);
-            var a =$(".page section:nth-child(1)").css("margin-top","-800px")
+           /* var a =$(".page section:nth-child(1)").css("margin-top","-800px")*/
         };
         $scope.preimg = function () {
             i = i < 0 ? imgs.length - 1 : i;
             $("#bg").attr("src", imgs[i--]);
-            var a =$(".page section:nth-child(1)").css("margin-top","10px")
+         /*   var a =$(".page section:nth-child(1)").css("margin-top","10px")*/
             /*  $("body").attr("style","background:url('themes/glowsimple/img/dots.png') center center fixed, url('"+imgs[i--]+"') center center no-repeat fixed;");*/
         };
         $scope.fullscreen = function () {
