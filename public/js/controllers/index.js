@@ -20,6 +20,7 @@ define([ 'i18n!resources/nls/res'], function (res) {
     var  IndexController=['$scope','$rootScope',function($scope,$rootScope) {
         $scope.title = res.title;
         $rootScope.title= res.title;
+  /*      $(".blog").sly({scrollBy:500,scrollBar:"id='scrollbar'",dragHandle:1,dynamicHandle:1,startAt:0});*/
     }];
 
     return IndexController;

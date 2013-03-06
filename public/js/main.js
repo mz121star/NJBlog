@@ -11,7 +11,9 @@ require.config({
         modernizer:'../lib/modernizr',
         html5shiv:'../lib/html5shiv',
         mcore:'../lib/mcore.min',
-        fullscreen:'../lib/fullscreen'
+        fullscreen:'../lib/fullscreen',
+        sly:'../lib/jquery.sly'
+
         //res:'../resources/nls/res'
 
     },
@@ -19,6 +21,7 @@ require.config({
         'angular' : {'exports' : 'angular'},
         'angular-resource' : {deps:['angular']},
         'bootstrap': {deps:['jquery']},
+        'sly':{deps:['jquery']},
         'underscore': {exports: '_'}/*,
         'res':{exports:'res'}*/
 
@@ -35,6 +38,7 @@ require.config({
 require(['angular',
          'app',
          'jquery',
+         'sly',
           'fullscreen',
           'mcore',
          'controllers/layout',

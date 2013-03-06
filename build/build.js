@@ -11,7 +11,8 @@
         modernizer:'../lib/modernizr',
         html5shiv:'../lib/html5shiv',
         mcore:'../lib/mcore.min',
-        fullscreen:'../lib/fullscreen'
+        fullscreen:'../lib/fullscreen',
+        sly:'../lib/jquery.sly'
         //res:'../resources/nls/res'
 
     },
@@ -19,6 +20,7 @@
         'angular' : {'exports' : 'angular'},
         'angular-resource' : {deps:['angular']},
         'bootstrap': {deps:['jquery']},
+        'sly':{deps:['jquery']},
         'underscore': {exports: '_'}
     },
 

@@ -240,7 +240,8 @@ FOOTER
 
 article.blogcontent {
     margin: 0 auto;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     color: white;
 }
 
@@ -304,7 +305,28 @@ article.blogcontent {
     -webkit-border-radius: 3px;
 }
 
-
+/*.scrollbar {
+    background: gray;
+    border-radius: 4px;
+    border: 2px solid gray;
+    border-top-color: #666;
+    line-height: 0;
+    position:absolute;
+    top: 0px;
+    left: 10px;
+    height: 500px;
+    width: 5px;
+}
+.handle{
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    line-height: 0;
+    box-shadow: 0 1px 0 #555;
+    position: absolute;
+    top: 0px;
+    height: 100px;
+}*/
 @media screen and (max-width:600px) {
     .login-form {
         width: 300px;
