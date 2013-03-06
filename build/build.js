@@ -1,5 +1,5 @@
 ({
-    baseUrl: ".",
+    baseUrl: "../public/js",
     paths: {
         jquery: '../lib/jquery/jquery-1.8.2.min',
         bootstrap: '../lib/bootstrap/js/bootstrap',
@@ -23,5 +23,5 @@
     },
 
     name: "main",
-    out: "main-built.js"
+    out: "../public/js/main-built.js"
 })

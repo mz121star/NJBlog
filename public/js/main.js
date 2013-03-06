@@ -33,7 +33,7 @@ require.config({
 });
 
 require(['angular',
-         'app',/*'bootstrap'*/,/*'modernizer'*/
+         'app',
          'jquery',
           'fullscreen',
          'mcore',

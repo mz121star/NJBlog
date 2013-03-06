@@ -7,7 +7,7 @@
  */
 
 //TODO Define module
-define(['../app'], function (app) {
+define([], function () {
 var SignUpController = ["$scope", "$rootScope", "$http", "$location", function ($scope, $rootScope, $http, $location) {
     $rootScope.title = "SignUp";
     $scope.user = {

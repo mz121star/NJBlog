@@ -4,9 +4,9 @@ define(['../app', 'i18n!resources/nls/res', '../../background/images'], function
     /* var bgimages=require("../../background/images").imageurls;*/
 
     return app.controller('LayoutController', function ($scope, $http) {
-        var i = 0,
+           var i = 0,
             imgs = images.imageurls,
-            randombg =function(){return Math.round(Math.random() * (imgs.length - 1))};
+            randombg =function(){return Math.round(Math.random() * (imgs.length - 1));};
 
         m$.Image.preLoadImages(imgs.slice(0,4));
         $http.get('/checklogin').success(function (user) {
@@ -64,7 +64,7 @@ define(['../app', 'i18n!resources/nls/res', '../../background/images'], function
                     var img=imgs[i++];
                     $("#bg").attr("src",img);
                     console.log("fullscreen picture"+img);
-                },2000)
+                },2000);
                  window.fullScreenApi.requestFullScreen(document.getElementById('njblogbg'));
             }else{
                 alert('就你这浏览器，基本就告别全屏功能了,赶紧卸载了吧！！！');
