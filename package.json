@@ -18,7 +18,11 @@
         "chai":"*",
         "mocha":"*",
         "rewire":"*",
-        "jscover":"*"
+        "jscover":"*",
+        "grunt": "~0.4.0",
+        "grunt-contrib-jshint": "~0.1.1",
+        "grunt-contrib-uglify": "~0.1.2",
+        "grunt-contrib-concat": "~0.1.1"
     },
     "scripts":{
         "test":"make test",
