@@ -22,6 +22,14 @@
   - 可以导入站外blog内容（有限制的导入）
 ```
 
+**发布项目**
+
+```
+  - 使用grunt对项目进行build
+
+
+```
+
   [项目进度查询](https://trello.com/board/node-js-blog/50dda31c39e3d3341b001433 "项目进度")
   
 
