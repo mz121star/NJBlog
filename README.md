@@ -33,6 +33,9 @@
 ```
 
 
+----------
+
+
 
 
 #*NJBlog*多人博客系统#  [![Build Status](https://travis-ci.org/mz121star/NJBlog.png?branch=master)](https://travis-ci.org/mz121star/NJBlog)
