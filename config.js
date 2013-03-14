@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 module.exports={
-
-     connectionstring:'mongodb://localhost/njblog'
+    cookieSecret:'njblog',
+    connectionstring:'mongodb://njblog:njblog@linus.mongohq.com:10062/NJBlog'
+    // connectionstring:'mongodb://localhost/njblog'
 };

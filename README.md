@@ -1,3 +1,40 @@
+#*NJBlog* Blog Project#  [![Build Status](https://travis-ci.org/mz121star/NJBlog.png?branch=master)](https://travis-ci.org/mz121star/NJBlog)
+
+----------
+
+*NJBlog*
+
+**Function**
+
+```
+    - many people blog system
+    - there are individual ranking function
+    - you can add and delete blog posts.
+    - can reply blog content, the author can set the reply is prohibited
+    - support RSS feeds
+    - verify login support third-party web sites, such as renren, weibo, watercress, etc
+    - you can import inbound blog content (restricted import)
+
+```
+
+**Build Tool**
+
+```
+  - build by grunt
+
+
+```
+
+  [schedule ](https://trello.com/board/node-js-blog/50dda31c39e3d3341b001433 "schedule ")
+
+
+
+
+```
+
+
+
+
 #*NJBlog*多人博客系统#  [![Build Status](https://travis-ci.org/mz121star/NJBlog.png?branch=master)](https://travis-ci.org/mz121star/NJBlog)
 
 ----------
@@ -33,9 +70,9 @@
   [项目进度查询](https://trello.com/board/node-js-blog/50dda31c39e3d3341b001433 "项目进度")
   
 
-**NJBlog目前由两位Node爱好者协同开发！**
 
 ```
+
 Copyright (c) 2012 Jarrick,Sailor contributors
 
 Permission is hereby granted, free of charge, to any person obtaining
