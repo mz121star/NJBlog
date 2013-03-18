@@ -12,8 +12,8 @@ require.config({
         html5shiv:'../lib/html5shiv',
         mcore:'../lib/mcore.min',
         fullscreen:'../lib/fullscreen',
-        sly:'../lib/jquery.sly'
-
+        sly:'../lib/jquery.sly',
+        detectbrowser:'../lib/detectbrowser'
         //res:'../resources/nls/res'
 
     },
@@ -44,7 +44,8 @@ require(['angular',
          'controllers/layout',
          'controllers/index',
          'directives/compare',
-         'routes'
+         'routes',
+         'detectbrowser'
 ], function (angular) {
     angular.bootstrap(document, ['app']);
 });

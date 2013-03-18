@@ -18,7 +18,8 @@ module.exports = function(grunt) {
                         html5shiv:'../lib/html5shiv',
                         mcore:'../lib/mcore.min',
                         fullscreen:'../lib/fullscreen',
-                        sly:'../lib/jquery.sly'
+                        sly:'../lib/jquery.sly',
+                        detectbrowser:'../lib/detectbrowser'
                         //res:'../resources/nls/res'
 
                     },
@@ -29,9 +30,11 @@ module.exports = function(grunt) {
                         'sly':{deps:['jquery']},
                         'underscore': {exports: '_'}
                     },
+
                     optimize:"none",
                     name: "main",
                     out: "dest/main-built.js"
+
                     //out: "../public/js/main-built.js"
                 }
             }
