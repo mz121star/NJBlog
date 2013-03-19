@@ -8,7 +8,7 @@ require.config({
         angularResource: '../lib/angular/angular-resource',
         text: '../lib/require/text',
         i18n:'../lib/require/i18n',
-        modernizer:'../lib/modernizr',
+        modernizr:'../lib/modernizr',
         html5shiv:'../lib/html5shiv',
         mcore:'../lib/mcore.min',
         fullscreen:'../lib/fullscreen',
@@ -22,7 +22,9 @@ require.config({
         'angular-resource' : {deps:['angular']},
         'bootstrap': {deps:['jquery']},
         'sly':{deps:['jquery']},
-        'underscore': {exports: '_'}/*,
+        'underscore': {exports: '_'},
+        'detectbrowser':{deps:['modernizr']}
+        /*,
         'res':{exports:'res'}*/
 
     },

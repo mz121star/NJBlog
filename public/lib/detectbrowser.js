@@ -1,6 +1,6 @@
-define(['modernizer'],function(modernizr){
-    modernizr.load({
-        test: modernizr.mq('only all'),
+define(function(){
+    Modernizr.load({
+        test: Modernizr.mq('only all'),
         nope: '../lib/respond.min.js'
     });
 })
