@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body onload="go()">
+<form method="POST" name="transfer" id="form" action="http://mblog.pactera.com/ajax/postform-submit/ajaxtp:xml/r:53">
+    <input type="hidden" id="temp1" name="post_temp_id" value="11"/>
+    <input type="hidden" id="msg" name="message" value="1000"/>
+    <input type="text" value="sds" id="sds"/>
+    <input type="submit" value="ok"/>
+</form>
+
+</body>
+<script type="text/javascript">
+    function postform_generate_tmpid(len, lte)
+    {
+        if( !len ) { len = 10; }
+        if( !lte) { lte = "abcdefghijklmnopqrstuvwxyz0123456789"; }
+        var i, word = "";
+        for(i=0; i<len; i++) {
+            word+= lte.charAt(Math.round(Math.random()*(lte.length-1)));
+        }
+        return word;
+    }
+    function go() {
+        document.getElementById("temp1").value = postform_generate_tmpid(10);
+        document.getElementById("msg").value = 'hello pactera';
+        document.transfer.submit();
+    }
+</script>
+</html>
