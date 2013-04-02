@@ -21,15 +21,14 @@ define([ 'i18n!resources/nls/res','mcustomscrollbar'], function (res,mcustomscro
         $scope.title = res.title;
         $rootScope.title= res.title;
   /*      $(".blog").sly({scrollBy:500,scrollBar:"id='scrollbar'",dragHandle:1,dynamicHandle:1,startAt:0});*/
-        $(function(){
-
+   /*     $(function(){
             console.log("scroll bar");
             $(".blog").mCustomScrollbar({
                 scrollButtons:{
                     enable:true
                 }
             });
-        });
+        });*/
 
 
     }];
