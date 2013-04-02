@@ -40,7 +40,6 @@ require.config({
 require(['angular',
          'app',
          'jquery',
-         'mcustomscrollbar',
           'fullscreen',
           'mcore',
          'controllers/layout',

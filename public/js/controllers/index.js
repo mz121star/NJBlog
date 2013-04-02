@@ -15,13 +15,14 @@ define(['../app'], function (app) {
 });*/
 'use strict';
 
-define([ 'i18n!resources/nls/res'], function (res) {
+define([ 'i18n!resources/nls/res','mcustomscrollbar'], function (res,mcustomscrollbar) {
 
     var  IndexController=['$scope','$rootScope',function($scope,$rootScope) {
         $scope.title = res.title;
         $rootScope.title= res.title;
   /*      $(".blog").sly({scrollBy:500,scrollBar:"id='scrollbar'",dragHandle:1,dynamicHandle:1,startAt:0});*/
         $(function(){
+
             console.log("scroll bar");
             $(".blog").mCustomScrollbar({
                 scrollButtons:{
