@@ -1,10 +1,42 @@
 
 
-#*NJBlog*多人博客系统    [![Build Status](https://travis-ci.org/mz121star/NJBlog.png?branch=master)](https://travis-ci.org/mz121star/NJBlog)
+#*NJBlog*     [![Build Status](https://travis-ci.org/mz121star/NJBlog.png?branch=master)](https://travis-ci.org/mz121star/NJBlog)
+  [项目进度查询](https://trello.com/board/node-js-blog/50dda31c39e3d3341b001433 "项目进度")
 
 ----------
 
+**Project introduction：**
 
+  - NJBLog through  [Nodejs](http://nodejs.org/ "Nodejs") and [express](http://expressjs.com/) Provide the Restful API.
+  - Data stored in [Mongodb](http://www.mongodb.org/)，Driven by [Mongoose](https://github.com/LearnBoost/mongoose) 。
+  - Front-End  use [AngularJs](http://angularjs.org/)。
+  - NJBlog all javascript files follow AMD standard，by [Requirejs](http://requirejs.org/)   loading （The future might consider using [Seajs](http://seajs.org/docs/)）。
+  - NJBlog through [mocha](http://visionmedia.github.com/mocha/) and [jasmine](http://pivotal.github.com/jasmine/) for UT 。
+  - Style use of the [bootstrap](https://github.com/twitter/bootstrap)。
+  - NJBlog building by Grunt。
+ 。
+
+**Checkout and Run：**
+
+  > First ,Assume you installed[Mongodb](http://www.mongodb.org/)，and [Nodejs](http://nodejs.org/ "Nodejs") in your OS。
+
+**1，clone code**
+
+ >  `git clone https://github.com/mz121star/NJBlog.git`
+ 
+
+**2，install**
+
+>  `npm install`
+
+
+**3，Run app**
+
+
+>  `node app.js`
+
+
+----
 
 **项目介绍：**
 
@@ -20,25 +52,27 @@
 
 **获得并运行项目：**
 
-  > 首先确保您系统中安装了Mongodb和Nodejs，一起准备完善之后。按照如下操作。
+  > 首先确保您系统中安装了[Mongodb](http://www.mongodb.org/)，和[Nodejs](http://nodejs.org/ "Nodejs")，一起准备完善之后。按照如下操作。
 
 **1，clone代码**
 
-   `git clone https://github.com/mz121star/NJBlog.git`
+ >  `git clone https://github.com/mz121star/NJBlog.git`
  
 
 **2，安装依赖**
 
-　 `npm install`
+>  `npm install`
+
 
 **3，启动程序**
 
-　  `node app.js`
+
+>  `node app.js`
  
 
 
-> 
->   [项目进度查询](https://trello.com/board/node-js-blog/50dda31c39e3d3341b001433 "项目进度")
+
+
   
 
 
