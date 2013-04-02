@@ -21,6 +21,16 @@ define([ 'i18n!resources/nls/res'], function (res) {
         $scope.title = res.title;
         $rootScope.title= res.title;
   /*      $(".blog").sly({scrollBy:500,scrollBar:"id='scrollbar'",dragHandle:1,dynamicHandle:1,startAt:0});*/
+        $(function(){
+            console.log("scroll bar");
+            $(".blog").mCustomScrollbar({
+                scrollButtons:{
+                    enable:true
+                }
+            });
+        });
+
+
     }];
 
     return IndexController;

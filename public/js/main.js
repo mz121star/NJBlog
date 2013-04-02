@@ -12,7 +12,7 @@ require.config({
         html5shiv:'../lib/html5shiv',
         mcore:'../lib/mcore.min',
         fullscreen:'../lib/fullscreen',
-        sly:'../lib/jquery.sly',
+        mcustomscrollbar:'../lib/jquery.mCustomScrollbar.concat.min',
         detectbrowser:'../lib/detectbrowser'
         //res:'../resources/nls/res'
 
@@ -21,7 +21,7 @@ require.config({
         'angular' : {'exports' : 'angular'},
         'angular-resource' : {deps:['angular']},
         'bootstrap': {deps:['jquery']},
-        'sly':{deps:['jquery']},
+        'mcustomscrollbar':{deps:['jquery']},
         'underscore': {exports: '_'},
         'detectbrowser':{deps:['modernizr']}
         /*,
@@ -40,7 +40,7 @@ require.config({
 require(['angular',
          'app',
          'jquery',
-         'sly',
+         'mcustomscrollbar',
           'fullscreen',
           'mcore',
          'controllers/layout',

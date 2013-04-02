@@ -18,7 +18,7 @@ module.exports = function(grunt) {
                         html5shiv:'../lib/html5shiv',
                         mcore:'../lib/mcore.min',
                         fullscreen:'../lib/fullscreen',
-                        sly:'../lib/jquery.sly',
+                        mcustomscrollbar:'../lib/jquery.mCustomScrollbar.concat.min',
                         detectbrowser:'../lib/detectbrowser'
                         //res:'../resources/nls/res'
 
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
                         'angular' : {'exports' : 'angular'},
                         'angular-resource' : {deps:['angular']},
                         'bootstrap': {deps:['jquery']},
-                        'sly':{deps:['jquery']},
+                        'mcustomscrollbar':{deps:['jquery']},
                         'underscore': {exports: '_'},
                         'detectbrowser':{deps:['modernizr']}
                         /*,
