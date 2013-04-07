@@ -9,7 +9,7 @@
 
   - NJBLog through  [Nodejs](http://nodejs.org/ "Nodejs") and [express](http://expressjs.com/) Provide the Restful API.
   - Data stored in [Mongodb](http://www.mongodb.org/)，Driven by [Mongoose](https://github.com/LearnBoost/mongoose) 。
-  - Front-End  use [AngularJs](http://angularjs.org/)。
+  - Front-End  use of the [AngularJs](http://angularjs.org/)。
   - NJBlog all javascript files follow AMD standard，by [Requirejs](http://requirejs.org/)   loading （The future might consider using [Seajs](http://seajs.org/docs/)）。
   - NJBlog through [mocha](http://visionmedia.github.com/mocha/) and [jasmine](http://pivotal.github.com/jasmine/) for UT 。
   - Style use of the [bootstrap](https://github.com/twitter/bootstrap)。
