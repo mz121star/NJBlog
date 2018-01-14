@@ -11,7 +11,7 @@
   - Data stored in [Mongodb](http://www.mongodb.org/)，Driven by [Mongoose](https://github.com/LearnBoost/mongoose) 。
   - Front-End  use of the [AngularJs](http://angularjs.org/)。
   - NJBlog all javascript files follow AMD standard，by [Requirejs](http://requirejs.org/)   loading （The future might consider using [Seajs](http://seajs.org/docs/)）。
-  - NJBlog through [mocha](http://visionmedia.github.com/mocha/) and [jasmine](http://pivotal.github.com/jasmine/) for UT 。
+  - NJBlog through [mocha](http://mochajs.org/) and [jasmine](http://pivotal.github.com/jasmine/) for UT 。
   - Style use of the [bootstrap](https://github.com/twitter/bootstrap)。
   - NJBlog building by Grunt。
  。
@@ -44,7 +44,7 @@
   - 数据库采用 [Mongodb](http://www.mongodb.org/)，通过[Mongoose](https://github.com/LearnBoost/mongoose)驱动。
   - NJBlog前台采用[AngularJs](http://angularjs.org/)进行开发。
   - NJBlog目前所有前端JS代码全部采用模块化编写，使用[Requirejs](http://requirejs.org/)驱动（将来可能考虑采用国产[Seajs](http://seajs.org/docs/)）。
-  - NJBlog使用[mocha](http://visionmedia.github.com/mocha/)+[jasmine](http://pivotal.github.com/jasmine/)来编写js单元测试。
+  - NJBlog使用[mocha](http://mochajs.org/)+[jasmine](http://pivotal.github.com/jasmine/)来编写js单元测试。
   - 前端UI使用了[bootstrap](https://github.com/twitter/bootstrap)。
   - NJBlog使用强大的grunt对项目进行构建工作。
   - NJBlog全部代码托管在GitHub上，使用牛逼的travis-ci进行持续集成（可用来跑单元测试）。
