@@ -4,6 +4,6 @@ node_js:
    - "0.6"
 notifications:
    email:
-     - xiangnan.zhang@pactera.com
+     - z@zhangxiangnan.cn
      - zhuang.miao@pactera.com
 

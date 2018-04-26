@@ -1,70 +1,111 @@
 @charset "utf-8";
 @import url("reset.css");
+
 /* -------------------------------------------------
  * common
  * -------------------------------------------------
 */
-.page{
-    text-align:left;
-    padding-top:40px;
+.page {
+    text-align: left;
+    padding-top: 40px;
+    position: relative;
 }
-.wrap_top_nav{
-    background-color:#333;
-    box-shadow:0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
-    height:40px;
+
+.wrap_top_nav {
+    background-color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+    height: 40px;
+    position: relative;
+    opacity: 0.8;
 }
-#top_nav{
-    width:1000px;
-    margin:0 auto;
-    position:relative;
+
+#top_nav {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
 }
-#top_nav a{
-    font-size:16px;
-    line-height:40px;
-    float:left;
-    margin-right:20px;
-    color:#999;
-    text-decoration:none;
+
+#top_nav a {
+    font-size: 16px;
+    line-height: 40px;
+    float: left;
+    margin-right: 20px;
+    color: #999;
+    text-decoration: none;
 }
-#top_nav a:hover{
-    color:#fff;
+
+#top_nav a:hover {
+    color: #fff;
 }
-#top_nav li:nth-child(1) a{
-    background-image:url(../img/logo.png);
+
+#top_nav li:nth-child(1) a {
+    background-image: url(../img/logo.png);
     background-position: 0 -12px;
     background-repeat: no-repeat;
     background-size: 68px 60px;
-    padding-left:74px;
-    color:#fff;
-    width:74px;
-    overflow:hidden;
+    padding-left: 74px;
+    overflow: hidden;
 }
-#read{
-    position:absolute;
-    right:0;
-    top:0;
-    font-family:'����';
+
+#read {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: '����';
 }
-#header{
-    text-align:center;
+
+#header {
+    text-align: center;
 }
-#header .white{
-    color:#fff;
+
+#header .white {
+    color: #fff;
 }
-#header .blank{
-    color:#444;
+
+#header .blank {
+    color: #444;
 }
-#header h1{
-    font-size:24px;
+
+#header h1 {
+    font-size: 24px;
 }
-#header h2{
-    font-weight:normal;
+
+#header h2 {
+    font-weight: normal;
 }
+
 #ad_w3cplus {
     width: 750px;
     margin: 100px auto;
     text-align: center;
 }
+
 #ad_w3cplus .grid-ad {
-    float:left;
+    float: left;
 }
+
+#njblogbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 1;
+}
+#bg{
+     width: 100%; height: 100%; margin-left: 0px;visibility: visible; opacity: 1;
+}
+.prv-fullscreen, .nxt-fullscreen {
+    position: absolute;
+     margin-top: -100px;
+    color: red;
+    float: left;
+    font: 300 28px/34px 'Denk One', sans-serif;
+    color: #414848;
+    text-shadow: 1px 1px 0 rgba(256, 256, 256, 1.0);
+    display: block;
+    z-index: 10;;
+
+}
+.nxt-fullscreen {float: right;right: 0}

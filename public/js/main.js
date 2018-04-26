@@ -8,9 +8,12 @@ require.config({
         angularResource: '../lib/angular/angular-resource',
         text: '../lib/require/text',
         i18n:'../lib/require/i18n',
-        modernizer:'../lib/modernizr',
+        modernizr:'../lib/modernizr',
         html5shiv:'../lib/html5shiv',
-        mcore:'../lib/mcore.min'
+        mcore:'../lib/mcore.min',
+        fullscreen:'../lib/fullscreen',
+        mcustomscrollbar:'../lib/jquery.mCustomScrollbar.concat.min',
+        detectbrowser:'../lib/detectbrowser'
         //res:'../resources/nls/res'
 
     },
@@ -18,7 +21,10 @@ require.config({
         'angular' : {'exports' : 'angular'},
         'angular-resource' : {deps:['angular']},
         'bootstrap': {deps:['jquery']},
-        'underscore': {exports: '_'}/*,
+        'mcustomscrollbar':{deps:['jquery']},
+        'underscore': {exports: '_'},
+        'detectbrowser':{deps:['modernizr']}
+        /*,
         'res':{exports:'res'}*/
 
     },
@@ -32,13 +38,15 @@ require.config({
 });
 
 require(['angular',
-         'app','bootstrap',/*'modernizer'*/,
+         'app',
+         'jquery',
+          'fullscreen',
           'mcore',
          'controllers/layout',
          'controllers/index',
          'directives/compare',
-         'routes'
-
+         'routes',
+         'detectbrowser'
 ], function (angular) {
     angular.bootstrap(document, ['app']);
 });

@@ -1,27 +1,33 @@
 {
-    "name":"NJBlog",
-    "version":"0.0.1",
-    "private":true,
-    "main":"app.js",
-    "dependencies":{
-        "express":"3.0.6",
-        "ejs":"latest",
-        "mongoose":"latest",
-        "colors":"latest",
-        "mongodb":"latest",
-        "connect-mongo":"latest",
-        "connect-flash":"latest",
-        "requirejs":"latest"
-    },
-    "devDependencies":{
-        "should":"*",
-        "chai":"*",
-        "mocha":"*",
-        "rewire":"*",
-        "jscover":"*"
-    },
-    "scripts":{
-        "test":"make test",
-        "test-cov":"make test-cov"
-    }
+  "name": "NJBlog",
+  "version": "0.0.1",
+  "private": true,
+  "main": "app.js",
+  "dependencies": {
+    "express": "3.0.6",
+    "ejs": "latest",
+    "mongoose": "latest",
+    "colors": "latest",
+    "mongodb": "latest",
+    "connect-mongo": "latest",
+    "connect-flash": "latest",
+    "requirejs": "latest"
+  },
+  "devDependencies": {
+    "should": "*",
+    "chai": "*",
+    "mocha": "*",
+    "rewire": "*",
+    "jscover": "*",
+    "grunt": "~0.4.0",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-uglify": "~0.1.2",
+    "grunt-contrib-concat": "~0.1.1",
+    "grunt-contrib-requirejs": "~0.4.0",
+    "grunt-contrib-cssmin": "~0.4.2"
+  },
+  "scripts": {
+    "test": "make test",
+    "test-cov": "make test-cov"
+  }
 }

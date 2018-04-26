@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 //TODO Define module
-define(['../app', 'i18n!resources/nls/res'], function (app, res) {
+define([ 'i18n!resources/nls/res'], function (res) {
     var LoginController = ["$scope", "$rootScope", "$http", "$location",
         function ($scope, $rootScope, $http, $location) {
             $rootScope.title = res.login;

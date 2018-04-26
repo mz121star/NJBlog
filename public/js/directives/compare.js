@@ -16,4 +16,15 @@ app.directive('compare', function () {
         }
     };
 });
+  app.directive('ngScroll', function () {
+        return {
+            link:function (scope, elm, attrs, ctrl) {
+                $(elm).mCustomScrollbar({
+                    scrollButtons:{
+                        enable:true
+                    }
+                });
+            }
+        };
+    });
 });

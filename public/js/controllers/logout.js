@@ -1,5 +1,5 @@
 
-define(['../app', 'i18n!resources/nls/res'], function (app,res) {
+define([ 'i18n!resources/nls/res'], function (res) {
 var LogoutController = ["$scope", "$rootScope", "$http", "$location",
     function ($scope, $rootScope, $http, $location) {
         $rootScope.title =res.logout;

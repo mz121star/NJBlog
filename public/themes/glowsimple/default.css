@@ -10,9 +10,10 @@ body {
     text-decoration: none;
     overflow: hidden;
     /*background: none;*/
-    background-color: #252326;
-    background: url('img/dots.png') center center fixed, url('img/bg.jpg') center center no-repeat fixed;
-    background-size: auto, cover;
+
+    /* background-color: #252326;
+     background: url('img/dots.png') center center fixed, url('img/bg.jpg') center center no-repeat fixed;
+     background-size: auto, cover;*/
 }
 
 @font-face {
@@ -87,7 +88,20 @@ HEADER
     height: 19px;
     margin: 0 3px;
     overflow: hidden;
-   /* text-indent: -2000px;*/
+    /* text-indent: -2000px;*/
+}
+
+#top_nav li:nth-child(1) a {
+
+    background: url(img/spriteme1.png) no-repeat -10px -22px;
+
+}
+
+#top_nav li:nth-child(4) a {
+
+    background: url(img/spriteme1.png) no-repeat -10px -78px;
+    width: 48px;
+    text-indent: -2000px;
 }
 
 /*******************
@@ -112,8 +126,7 @@ CONTENT
     margin-left: 20px;
 }
 
-.login-form .content .password,
-.login-form .content .icon-pass {
+.login-form .content .password {
     margin-top: 25px;
 
 }
@@ -169,12 +182,12 @@ FOOTER
 .login-form .footer {
     padding: 25px 30px 40px 1px;
     overflow: auto;
-    float: left;
+    /*  float: left;*/
 }
 
 /* Login button */
 .login-form .footer .button {
-    float: right;
+    /* float: right;*/
     padding: 11px 25px;
     font: 300 18px 'Denk One', sans-serif;
     color: #fff;
@@ -184,7 +197,7 @@ FOOTER
     border-radius: 5px;
     cursor: pointer;
     box-shadow: inset 0 0 2px rgba(256, 256, 256, 0.75);
-    float: left;
+    /* float: left;*/
 
 }
 
@@ -204,7 +217,7 @@ FOOTER
 /* Register button */
 .login-form .footer .register {
     display: block;
-    float: right;
+    /*float: right;*/
     padding: 10px;
     margin-right: 20px;
     background: none;
@@ -225,19 +238,95 @@ FOOTER
     bottom: -1px;
 }
 
-section.blogcontent {
+article.blogcontent {
     margin: 0 auto;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     color: white;
 }
 
 .login-form {
-    width: 850px;
+    width: 1000px;
     margin: 50px auto;
     position: relative;
     transition: all 0.5s;
 }
 
+#njblogbg {
+    background: url('img/dots.png') center center fixed;
+}
+
+#bg {
+    opacity: 0.8;
+}
+
+article.blogcontent {
+    background: black;
+    opacity: 0.8;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+    transition: all 1s;
+}
+
+.blog {
+    margin: 10px auto 0px;
+    height: 580px;
+    overflow-y: scroll;
+    width: 870px;
+}
+
+::selection {
+    background: #ff5f3e
+}
+
+/*chrome scroll bar */
+
+::-webkit-scrollbar
+{
+    width: 3px;
+    height: 3px;
+}
+::-webkit-scrollbar-track-piece
+{
+    background-color: #ffffff;
+    -webkit-border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:vertical
+{
+    height: 5px;
+    background-color: #666;
+    -webkit-border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:horizontal
+{
+    width: 5px;
+    background-color: #666;
+    -webkit-border-radius: 3px;
+}
+
+/*.scrollbar {
+    background: gray;
+    border-radius: 4px;
+    border: 2px solid gray;
+    border-top-color: #666;
+    line-height: 0;
+    position:absolute;
+    top: 0px;
+    left: 10px;
+    height: 500px;
+    width: 5px;
+}
+.handle{
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    line-height: 0;
+    box-shadow: 0 1px 0 #555;
+    position: absolute;
+    top: 0px;
+    height: 100px;
+}*/
 @media screen and (max-width:600px) {
     .login-form {
         width: 300px;
@@ -246,5 +335,9 @@ section.blogcontent {
     .icon-pass {
         top: 220px;
         margin-top: 20px;
+    }
+
+    .login-form .footer {
+        padding: 25px 30px 40px 50px;
     }
 }
